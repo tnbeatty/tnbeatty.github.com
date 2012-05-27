@@ -96,5 +96,25 @@ code {
 }
 
 .wrapper p {
-	margin: 15px 0px;
+	margin: 15px 0;
+}
+
+/* Blog-Post Styles */
+
+#post-list-item {
+	padding: 20px 0;
+	border-top: 1px solid #9bafbc;;
+}
+
+#post-list-item a {
+	color: inherit;
+}
+
+#post-list-item span {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#blog-post {
+
 }
