@@ -3,13 +3,13 @@ layout: default
 title: Nate Beatty | Blog
 ---
 
-<h1>Blog Name Here</h1>
+<h1>Nate's Blog</h1>
 
 {% for post in site.categories.blog limit:5 %}
 
 <div id="post-list-item">
     <span><a href="{{ post.url }}">{{ post.title }}</a></span> &raquo; {{ post.date | date_to_string }}
+    {{ post.content | truncate: 300 }}
 </div>
 
 {% endfor %}
-
