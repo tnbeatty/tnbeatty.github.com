@@ -1,6 +1,6 @@
 ---
 layout: blog_post
-title: First Post
+title: Hello World
 category: blog
 ---
 
