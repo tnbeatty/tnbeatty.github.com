@@ -167,6 +167,10 @@ code {
 	padding: 5px;
 }
 
+.share-this {
+	float: right;
+}
+
 /* Blog-Post Styles */
 
 #post-list-item {
