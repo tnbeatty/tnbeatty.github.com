@@ -1,6 +1,7 @@
 name: Creative Hipster Blog Title
 description: I'm not lazy - my code's just compiling.
 url: http://tnbeatty.github.com/blog.html
+author: Nate Beatty
 
 email: nate@strabogis.com
 
@@ -12,3 +13,6 @@ auto: true
 
 # Do not publish posts with future date
 future: false
+
+# Late Symantic Indexing
+lsi: true
