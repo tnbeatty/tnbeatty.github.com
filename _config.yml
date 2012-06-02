@@ -1,2 +1,8 @@
+# Pygments for syntax highlighting
 pygments: true
-email: nate.beatty@gmail.com
+
+# Server will automatically regenerate modified files
+auto: true
+
+# Do not publish posts with future date
+future: false
