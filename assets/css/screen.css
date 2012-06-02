@@ -142,6 +142,10 @@ code {
 	-moz-border-radius: 5px;
 }
 
+.info-box ul {
+	margin-left: 20px;
+}
+
 .social-icon {
 	float: left;
 	width: 50px;

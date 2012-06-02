@@ -11,3 +11,8 @@ Blog posts should be formatted with the following page attributes:
 * layout: blog_post
 * title: Sample Title
 * category: blog
+
+Project Post Format
+---
+Projects should be formatted with the following page attributes:
+* 
