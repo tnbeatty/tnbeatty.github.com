@@ -164,16 +164,16 @@ ul {
 		height: 50px;
 		a {
 			/* Apply grayscale filter */
-		    filter: gray; /* IE6-9 */
+		    //filter: gray; /* IE6-9 */
 		    -webkit-filter: grayscale(1); /* Google Chrome & Webkit Nightlies */
 		    /* Apply transition */
 		    @include global-transition(-webkit-filter, .3s);
-		    @include global-transition(filter, .2s);
+		    //@include global-transition(filter, .2s);
 			color: none;
 		}
 		a:hover {
 			/* Remove filters */
-			filter: none;
+			//filter: none;
     		-webkit-filter: grayscale(0);
 		}
 		img {
