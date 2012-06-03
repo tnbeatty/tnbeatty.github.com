@@ -2,19 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Creative Hipster Blog Title</title>
-    <link>http://tnbeatty.github.com/blog.html</link>
-    <atom:link href="http://tnbeatty.github.com/blog.htmlrss.xml" rel="self" type="application/rss+xml" />
+    <link>http://tnbeatty.github.com</link>
+    <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Sun, 03 Jun 2012 09:27:41 -0400</pubDate>
-    <lastBuildDate>Sun, 03 Jun 2012 09:27:41 -0400</lastBuildDate>
+    <pubDate>Sun, 03 Jun 2012 10:10:49 -0400</pubDate>
+    <lastBuildDate>Sun, 03 Jun 2012 10:10:49 -0400</lastBuildDate>
 
     
     <item>
       <title>Website Construction with Jekyll</title>
-      <link>http://tnbeatty.github.com/blog.html/blog/2012/06/02/website-construction-with-jekyll.html</link>
+      <link>http://tnbeatty.github.com/blog/2012/06/02/website-construction-with-jekyll.html</link>
       <pubDate>Sat, 02 Jun 2012 00:00:00 -0400</pubDate>
-      <author>Nate Beatty</author>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2012/06/02/website-construction-with-jekyll</guid>
       <description>&lt;p&gt;02 Jun 2012 - Woodstock, VT&lt;/p&gt;
 &lt;!---
 Post content goes here.
@@ -99,34 +100,11 @@ Post content goes here.
     </item>
     
     <item>
-      <title>Strabo</title>
-      <link>http://tnbeatty.github.com/blog.html/projects/2012/06/02/strabo.html</link>
-      <pubDate>Sat, 02 Jun 2012 00:00:00 -0400</pubDate>
-      <author>Nate Beatty</author>
-      <description>&lt;p&gt;More information about Strabo coming soon.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>MMU OnAir</title>
-      <link>http://tnbeatty.github.com/blog.html/projects/2012/06/02/mmu-onair.html</link>
-      <pubDate>Sat, 02 Jun 2012 00:00:00 -0400</pubDate>
-      <author>Nate Beatty</author>
-      <description>&lt;p&gt;More information about MMU OnAir coming soon.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Middlebury Cycling</title>
-      <link>http://tnbeatty.github.com/blog.html/projects/2012/06/02/middlebury-cycling.html</link>
-      <pubDate>Sat, 02 Jun 2012 00:00:00 -0400</pubDate>
-      <author>Nate Beatty</author>
-      <description>&lt;p&gt;More information about Middlebury Cycling coming soon.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Hello World</title>
-      <link>http://tnbeatty.github.com/blog.html/blog/2012/05/27/hello-world.html</link>
+      <link>http://tnbeatty.github.com/blog/2012/05/27/hello-world.html</link>
       <pubDate>Sun, 27 May 2012 00:00:00 -0400</pubDate>
-      <author>Nate Beatty</author>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2012/05/27/hello-world</guid>
       <description>&lt;p&gt;27 May 2012 - Madison, CT&lt;/p&gt;
 &lt;!---
 Post content goes here.
