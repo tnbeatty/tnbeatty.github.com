@@ -165,12 +165,18 @@ ul {
 		width: 50px;
 		height: 50px;
 		a {
-			-webkit-filter: grayscale(100%);
-			-webkit-transition: -webkit-filter .2s;
+			/* Apply grayscale filter */
+		    filter: gray; /* IE6-9 */
+		    -webkit-filter: grayscale(1); /* Google Chrome & Webkit Nightlies */
+		    /* Apply transition */
+		    @include global-transition(-webkit-filter, .3s);
+		    @include global-transition(filter, .2s);
 			color: none;
 		}
 		a:hover {
-			-webkit-filter: grayscale(0);
+			/* Remove filters */
+			filter: none;
+    		-webkit-filter: grayscale(0);
 		}
 		img {
 			height: 40px;

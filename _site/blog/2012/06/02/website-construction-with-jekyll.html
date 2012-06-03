@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Website Construction with Jekyll</title>
+   <meta name="author" content="Nate Beatty" />
+   <!--<link href="http://feeds.feedburner.com/natebeatty?" rel="alternate" title="Nate Beatty" type="application/atom+xml" />-->
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/assets/css/screen.css" type="text/css" />
+
+   <!-- Code for the ShareThis buttons on blog posts -->
+   <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+   <script type="text/javascript">stLight.options({publisher: "fe2f9ad0-d56a-475a-addf-fe5daac54530"}); </script>
+
+</head>
+<body>
+
+	<div class="header">
+	<h1><a href="/index.html">Nate Beatty</a></h1>
+</div>
+
+	<div class="wrapper">
+
+		<div class="menu"><div class="menu">
+	<a href="/index.html">Home</a>
+	<a href="/projects.html">Projects</a>
+	<a href="/blog.html">Blog</a>
+	<a href="/about.html">About</a>
+</div></div>
+
+		<div class="share-this">
+	<span class='st_twitter_hcount' displayText='Tweet'></span>
+	<span class='st_facebook_hcount' displayText='Facebook'></span>
+</div>
+
+<h2>Website Construction with Jekyll</h2>
+
+<div class="blog-content" style="margin-bottom: 40px;">
+
+	<p>02 Jun 2012 - Woodstock, VT</p>
+<!---
+Post content goes here.
+-->
+<p>Now that I have the framework of my website constructed, I figured it would be a good time to write about how it is set up.</p>
+
+<p><img alt='Jekyll Monster' src='/assets/images/post_images/jekyll.png' /></p>
+
+<p>I decided to use Tom Preston-Werner&#8217;s <a href='https://github.com/mojombo/jekyll'>Jekyll</a> generator. Using Jekyll makes it easy to build new posts and pages quickly and in markdown (my favorite&#8230; easy webdev). I hosted the site on <a href='http://pages.github.com/'>git pages</a> because it is convenient to edit, push and track changes, and it&#8217;s free (a big improvement over <a href='http://www.fatcow.com/'>FatCow</a>, which costs me 56 bucks every year).</p>
+
+<p>After laying out the structure of the site and doing some quick CSS styling, I had a pretty decent site in just a couple of hours. I ran into a couple of snags, however. Some googling revealed the answers - jekyll sites seem to be becoming pretty popular.</p>
+
+<h3 id='css_transitions'>CSS Transitions</h3>
+
+<p>I get my hands dirty with CSS from time to time, but I am by no means a <a href='http://willpots.com'>CSS guru</a>. Most of my time these days is spent programming in Objective-C for iOS. I was pleased to stumble upon the &#8220;transition&#8221; tag. Replacing jQuery or JavaScript with CSS only makes things faster and more convenient.</p>
+
+<p>This is easy enough to look up, but I will provide an example here. I like hover-over links to be a little more subtle rather than having harsh and rapid color changes. The transition makes :hover much smoother and I think it goes well with the soft feel of a site with lots of textures and shadows. Thus, I decided to make all of the blue links in the body of my site use a css transition on hover to change color. <a href='http://caniuse.com/#search=transition'>Cross-browser support</a> is pretty good, too. Here&#8217;s how it&#8217;s done:</p>
+<div class='highlight'><pre><code class='css'><span class='nt'>a</span> <span class='p'>{</span>
+	<span class='k'>color</span><span class='o'>:</span> <span class='m'>#08c</span><span class='p'>;</span>
+	<span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+	<span class='o'>-</span><span class='n'>moz</span><span class='o'>-</span><span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+	<span class='o'>-</span><span class='n'>webkit</span><span class='o'>-</span><span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+	<span class='o'>-</span><span class='err'>o</span><span class='o'>-</span><span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+<span class='p'>}</span>
+
+<span class='nt'>a</span><span class='nd'>:hover</span> <span class='p'>{</span>
+	<span class='k'>color</span><span class='o'>:</span> <span class='m'>#006396</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
+<p>Just specify whatever tag you would like to change and the time over which the browser should linearly animate that change. Piece of cake.</p>
+
+<h3 id='sass_and_css'>SASS and CSS</h3>
+
+<p>Once I got all of my CSS figured out, I remembered how much I like <a href='http://sass-lang.com/'>SASS</a>. SASS is compact, easy to read, and easy to keep organized. Turns out it&#8217;s easy to use with Jekyll, too, especially since Jekyll <a href='https://github.com/mojombo/jekyll/wiki/Plugins'>plugin support</a>. Read about converting in general under the heading &#8221;<a href='https://github.com/mojombo/jekyll/wiki/Plugins'>converters</a>.&#8221; Available plugins are listed at the bottom - Instead of writing one from scratch, I used the <a href='https://gist.github.com/960150'>SASS scss Converter by Mark Wolfe</a>.</p>
+
+<p>To allow the use of SASS .scss files in place of css, I created a new <em>plugins directory in the root directory of my Jekyll site. Then I made a new file with filename sass</em>converter.rb. That&#8217;s it. Now when I run &#8220;$ jekyll &#8211;server&#8221; in my terminal (generate my site), it automatically generates CSS for me. Nice.</p>
+
+<pre><code>sass_converter.rb</code></pre>
+<div class='highlight'><pre><code class='ruby'><span class='k'>module</span> <span class='nn'>Jekyll</span>
+  <span class='nb'>require</span> <span class='s1'>&#39;sass&#39;</span>
+  <span class='k'>class</span> <span class='nc'>SassConverter</span> <span class='o'>&lt;</span> <span class='no'>Converter</span>
+    <span class='n'>safe</span> <span class='kp'>true</span>
+    <span class='n'>priority</span> <span class='ss'>:low</span>
+
+    <span class='k'>def</span> <span class='nf'>matches</span><span class='p'>(</span><span class='n'>ext</span><span class='p'>)</span>
+      <span class='n'>ext</span> <span class='o'>=~</span> <span class='sr'>/scss/i</span>
+    <span class='k'>end</span>
+
+    <span class='k'>def</span> <span class='nf'>output_ext</span><span class='p'>(</span><span class='n'>ext</span><span class='p'>)</span>
+      <span class='s2'>&quot;.css&quot;</span>
+    <span class='k'>end</span>
+
+    <span class='k'>def</span> <span class='nf'>convert</span><span class='p'>(</span><span class='n'>content</span><span class='p'>)</span>
+      <span class='k'>begin</span>
+        <span class='nb'>puts</span> <span class='s2'>&quot;Performing Sass Conversion.&quot;</span>
+        <span class='n'>engine</span> <span class='o'>=</span> <span class='no'>Sass</span><span class='o'>::</span><span class='no'>Engine</span><span class='o'>.</span><span class='n'>new</span><span class='p'>(</span><span class='n'>content</span><span class='p'>,</span> <span class='ss'>:syntax</span> <span class='o'>=&gt;</span> <span class='ss'>:scss</span><span class='p'>,</span> <span class='ss'>:load_paths</span> <span class='o'>=&gt;</span> <span class='o'>[</span><span class='s2'>&quot;./css/&quot;</span><span class='o'>]</span><span class='p'>)</span>
+        <span class='n'>engine</span><span class='o'>.</span><span class='n'>render</span>
+      <span class='k'>rescue</span> <span class='no'>StandardError</span> <span class='o'>=&gt;</span> <span class='n'>e</span>
+        <span class='nb'>puts</span> <span class='s2'>&quot;*** SASS Error: &quot;</span> <span class='o'>+</span> <span class='n'>e</span><span class='o'>.</span><span class='n'>message</span>
+      <span class='k'>end</span>
+    <span class='k'>end</span>
+
+  <span class='k'>end</span>
+<span class='k'>end</span>
+</code></pre>
+</div>
+<p>Of course, after doing this, you can still use standard CSS within a .scss file as SASS is a strict superset of CSS. Also, .css files will not be touched by the sass converter.</p>
+
+<h3 id='sass_highlighting_in_sublimetext'>SASS Highlighting in SublimeText</h3>
+
+<p>I love developing in <a href='http://www.sublimetext.com/'>Sublime</a>. They have syntax highlighting support for most common languages, but I needed to install a custom .tmbundle in this case. This is easy enough to do - thanks to <a href='https://github.com/kuroir'>kuroir</a> for his work. Run the following in terminal:</p>
+
+<pre><code>	$ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+	$ git clone git://github.com/kuroir/SCSS.tmbundle.git &quot;SCSS&quot;</code></pre>
+
+<p>Restart Sublime and you&#8217;re good to go.</p>
+
+<h3 id='github'>Github</h3>
+
+<p>If you are interested in exploring the source code further, <a href='https://github.com/tnbeatty/tnbeatty.github.com'>check it out on github</a>.</p>
+
+</div>
+
+<div class="blog-content" style="border-top: solid 1px #9bafbc">
+	<br />
+	Possibly Related Posts:
+	<ul>
+		
+		<li><a href="/blog/2012/05/27/hello-world.html">Hello World</a></li>
+		
+		<li><a href="/projects/2012/06/02/strabo.html">Strabo</a></li>
+		
+		<li><a href="/projects/2012/06/02/mmu-onair.html">MMU OnAir</a></li>
+		
+		<li><a href="/projects/2012/06/02/middlebury-cycling.html">Middlebury Cycling</a></li>
+		
+	</ul>
+</div>
+
+      <div class="footer">Made by <a href="http://natebeatty.com">Nate</a></div>
+
+	</div>
+</body>
