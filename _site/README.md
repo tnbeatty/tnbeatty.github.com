@@ -15,4 +15,10 @@ Blog posts should be formatted with the following page attributes:
 Project Post Format
 ---
 Projects should be formatted with the following page attributes:
-* 
+* layout: project_post
+* title: Sample Title
+* category: projects
+* imagehandle: imageNames
+* website: webLinkURL.com
+* twitter: twitterHandle
+* abstract: A short description

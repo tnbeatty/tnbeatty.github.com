@@ -6,9 +6,90 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Sun, 03 Jun 2012 10:27:50 -0400</pubDate>
-    <lastBuildDate>Sun, 03 Jun 2012 10:27:50 -0400</lastBuildDate>
+    <pubDate>Sun, 10 Jun 2012 18:06:16 -0400</pubDate>
+    <lastBuildDate>Sun, 10 Jun 2012 18:06:16 -0400</lastBuildDate>
 
+    
+    <item>
+      <title>iOS Device Rotation</title>
+      <link>http://tnbeatty.github.com/blog/2012/06/10/iOS-device-rotation.html</link>
+      <pubDate>Sun, 10 Jun 2012 00:00:00 -0400</pubDate>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2012/06/10/iOS-device-rotation</guid>
+      <description>&lt;p&gt;10 Jun 2012 - Woodstock, VT&lt;/p&gt;
+&lt;!---
+Post content goes here.
+--&gt;
+&lt;p&gt;You can handle device orientation changes in a number of different ways in iOS. The standard way is to let the device call a delegate method within each view controller and change any UI elements to fit the new dimensions. If we just need to rotate UI elements onscreen and don&amp;#8217;t want to actually change the device UI Interface Orientation, things get a little more complicated.&lt;/p&gt;
+
+&lt;h3 id='standard_orientation_handling'&gt;Standard Orientation Handling&lt;/h3&gt;
+
+&lt;p&gt;It is pretty standard to return YES for any supported orientations when the &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UIViewController_Class/Reference/Reference.html'&gt;shouldAutorotateToInterfaceOrientation:&lt;/a&gt; method is called in a view controller as below:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='o'&gt;-&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kt'&gt;BOOL&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nl'&gt;shouldAutorotateToInterfaceOrientation:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;UIInterfaceOrientation&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;interfaceOrientation&lt;/span&gt;
+&lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;interfaceOrientation&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='n'&gt;UIInterfaceOrientationPortrait&lt;/span&gt; &lt;span class='o'&gt;||&lt;/span&gt;
+            &lt;span class='n'&gt;interfaceOrientation&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='n'&gt;UIInterfaceOrientationLandscapeRight&lt;/span&gt;&lt;span class='o'&gt;||&lt;/span&gt;
+            &lt;span class='n'&gt;interfaceOrientation&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='n'&gt;UIInterfaceOrientationLandscapeLeft&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Apple documents this technique well in their orientation changes &lt;a href='http://developer.apple.com/library/ios/#featuredarticles/ViewControllerPGforiPhoneOS/RespondingtoDeviceOrientationChanges/RespondingtoDeviceOrientationChanges.html#//apple_ref/doc/uid/TP40007457-CH7-SW1'&gt;guide&lt;/a&gt;. After returning a true response in the above method, &lt;a href='http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instm/UIViewController/willRotateToInterfaceOrientation:duration:'&gt;willRotateToInterfaceOrientation:Duration:&lt;/a&gt; gets called. Within this method, you can handle any necessary animations.&lt;/p&gt;
+
+&lt;h3 id='rotating_onscreen_ui_elements'&gt;Rotating On-Screen UI Elements&lt;/h3&gt;
+
+&lt;p&gt;Lets say, for example, that we want to rotate an element on the screen whenever the device changes its interface orientation. At the same time, we don&amp;#8217;t actually want the interface orientation to change because we don&amp;#8217;t want to move elements around on the screen (toolbars, for example).&lt;/p&gt;
+
+&lt;p&gt;If what I am talking about is unclear, Apple&amp;#8217;s camera app is a perfect example to illustrate my point. When you switch from holding the device vertically to horizontally when using this application, the camera image on the record button, as well as the other icon-toolbar images, rotate to the proper orientation.&lt;/p&gt;
+
+&lt;p&gt;Trying to return YES for &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UIViewController_Class/Reference/Reference.html'&gt;shouldAutorotateToInterfaceOrientation:&lt;/a&gt; only when UIInterfaceOrientationPortrait == interfaceOrientation after rotating the necessary UI Elements doesn&amp;#8217;t work. Because the interface orientation is never actually changed when the device rotates in this case, returning the device to vertical never calls this method. We&amp;#8217;ll need to resort to another technique to determine device orientation changes.&lt;/p&gt;
+
+&lt;h3 id='detecting_device_orientation_changes'&gt;Detecting Device Orientation Changes&lt;/h3&gt;
+
+&lt;p&gt;In the view controller&amp;#8217;s viewDidLoad method, begin listening for a notification:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='p'&gt;[[&lt;/span&gt;&lt;span class='n'&gt;UIDevice&lt;/span&gt; &lt;span class='n'&gt;currentDevice&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='n'&gt;beginGeneratingDeviceOrientationNotifications&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+&lt;span class='p'&gt;[[&lt;/span&gt;&lt;span class='n'&gt;NSNotificationCenter&lt;/span&gt; &lt;span class='n'&gt;defaultCenter&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='nl'&gt;addObserver:&lt;/span&gt;&lt;span class='n'&gt;self&lt;/span&gt; 
+                                         &lt;span class='nl'&gt;selector:&lt;/span&gt;&lt;span class='k'&gt;@selector&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nl'&gt;deviceDidRotate:&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; 
+                                             &lt;span class='nl'&gt;name:&lt;/span&gt;&lt;span class='n'&gt;UIDeviceOrientationDidChangeNotification&lt;/span&gt; 
+                                           &lt;span class='nl'&gt;object:&lt;/span&gt;&lt;span class='nb'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Where a method in the view controller is called every time the device orientation is changed. In my view controller, I included the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    -(void)deviceDidRotate:(NSNotification *)notification;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Within this method, I rotate my UI elements according to the device orientation found by calling:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    [[UIDevice currentDevice] orientation];&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We just need to be careful when doing this because the device has more than four &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/c/tdef/UIDeviceOrientation'&gt;possible orientations&lt;/a&gt; - it detects face-up as well as face-down - which are irrelevant in my application.&lt;/p&gt;
+
+&lt;h3 id='handling_rotation'&gt;Handling Rotation&lt;/h3&gt;
+
+&lt;p&gt;Once we know that the device orientation has changed, we can handle the change by calling a helper method or animating any necessary UI elements. We just need to be careful because the device has face-down and face-up orientations.&lt;/p&gt;
+
+&lt;p&gt;I wrote a custom rotation method to handle animated rotations.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='o'&gt;-&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kt'&gt;void&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nl'&gt;rotateImage:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;UIImageView&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;image&lt;/span&gt; 
+           &lt;span class='nl'&gt;duration:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;NSTimeInterval&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;duration&lt;/span&gt;
+              &lt;span class='nl'&gt;curve:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kt'&gt;int&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;curve&lt;/span&gt; 
+            &lt;span class='nl'&gt;radians:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;CGFloat&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;radians&lt;/span&gt;
+&lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='c1'&gt;// Setup the animation                                                                           &lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;beginAnimations:&lt;/span&gt;&lt;span class='nb'&gt;nil&lt;/span&gt; &lt;span class='nl'&gt;context:&lt;/span&gt;&lt;span class='nb'&gt;NULL&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;setAnimationDuration:&lt;/span&gt;&lt;span class='n'&gt;duration&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;setAnimationCurve:&lt;/span&gt;&lt;span class='n'&gt;curve&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;setAnimationBeginsFromCurrentState:&lt;/span&gt;&lt;span class='n'&gt;YES&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+
+    &lt;span class='c1'&gt;// The transform matrix                                                                          &lt;/span&gt;
+    &lt;span class='n'&gt;CGAffineTransform&lt;/span&gt; &lt;span class='n'&gt;transform&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;CGAffineTransformMakeRotation&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;radians&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+    &lt;span class='n'&gt;image&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;transform&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;transform&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+
+    &lt;span class='c1'&gt;// Commit the changes                                                                            &lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='n'&gt;commitAnimations&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This cleans up the code a bit by providing the animation to rotate any UIImageView.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Website Construction with Jekyll</title>

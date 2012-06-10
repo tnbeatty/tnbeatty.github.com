@@ -2,6 +2,7 @@
 layout: blog_post
 title: Hello World
 category: blog
+tags: Website
 ---
 
 {{ page.date | date_to_string }} - Madison, CT
