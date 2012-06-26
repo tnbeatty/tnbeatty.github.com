@@ -6,9 +6,79 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Tue, 26 Jun 2012 00:39:42 -0400</pubDate>
-    <lastBuildDate>Tue, 26 Jun 2012 00:39:42 -0400</lastBuildDate>
+    <pubDate>Tue, 26 Jun 2012 18:51:49 -0400</pubDate>
+    <lastBuildDate>Tue, 26 Jun 2012 18:51:49 -0400</lastBuildDate>
 
+    
+    <item>
+      <title>Modern Objective-C</title>
+      <link>http://tnbeatty.github.com/blog/2012/06/28/modern-objective-c.html</link>
+      <pubDate>Thu, 28 Jun 2012 00:00:00 -0400</pubDate>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2012/06/28/modern-objective-c</guid>
+      <description>&lt;p&gt;28 Jun 2012 - Madison, CT&lt;/p&gt;
+&lt;!---
+Post content goes here.
+--&gt;
+&lt;p&gt;Today I watched a couple of &lt;a href='https://developer.apple.com/wwdc/'&gt;WWDC talks&lt;/a&gt; to stay current with Cocoa and modern Objective-C. It turns out that Apple has made some particularly helpful changes this year that will substantially improve the organization and readability of my code. I am very impressed with the power and complexity of Apple&amp;#8217;s compiler design - it is truly extraordinary.&lt;/p&gt;
+
+&lt;h2 id='accessor_generation'&gt;Accessor Generation&lt;/h2&gt;
+
+&lt;p&gt;Before I get to my favorite new feature, I feel as though I need to at least mention the changes to generating setters and getters for properties. From now on, properties are synthesized automatically. This is great news, as I am constantly forgetting to synthesize and create instance variables. Even better, the instance variables are automatically generated with the standard underscore naming convention. Previously, I would have two files with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;myObject.h&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;@property&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;readwrite&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;NSString&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;userName&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;myObject.m&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;@synthesize&lt;/span&gt; &lt;span class='n'&gt;userName&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;_userName&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, the part in myObject.m is generated for me&amp;#8230; How convenient!&lt;/p&gt;
+
+&lt;h2 id='private_class_methods'&gt;Private Class Methods&lt;/h2&gt;
+
+&lt;p&gt;Another feature that deserves mention is the ability to write private class methods without having to declare them in the header file (which would make them public), or extend the class via a category @interface within your class .m file. That&amp;#8217;s it - just don&amp;#8217;t declare the private method. Awesome.&lt;/p&gt;
+
+&lt;h2 id='object_literals'&gt;Object Literals&lt;/h2&gt;
+
+&lt;p&gt;This is my favorite change to Objective-C. Having had some experience with Java, Python, Ruby, and other languages that have cleaner syntax, I have been driven crazy about all of the text involved with making objects in my code. First off, now you can make NSNumbers just like you can make an NSString, designated by the @ symbol. For example:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;	&lt;span class='n'&gt;NSNumber&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;value&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mi'&gt;12345&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mi'&gt;12345&lt;/span&gt;&lt;span class='n'&gt;ul&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mi'&gt;12345l&lt;/span&gt;&lt;span class='n'&gt;l&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mf'&gt;123.45f&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mf'&gt;123.45&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='n'&gt;YES&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='p'&gt;([&lt;/span&gt;&lt;span class='n'&gt;myClass&lt;/span&gt; &lt;span class='n'&gt;expressionReturningANumber&lt;/span&gt;&lt;span class='p'&gt;]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Dictionaries and arrays take a tremendous amount of text. To create a dictionary, I have had to write something like this:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='n'&gt;NSDictionary&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;keyValuePairs&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; 
+	&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;NSDictionary&lt;/span&gt; &lt;span class='nl'&gt;dictionaryWithObjects:&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;NSArray&lt;/span&gt; &lt;span class='nl'&gt;arrayWithObjects:&lt;/span&gt;
+			&lt;span class='n'&gt;email&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+			&lt;span class='n'&gt;password&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+			&lt;span class='n'&gt;hash&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+			&lt;span class='nb'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; 
+        &lt;span class='nl'&gt;forKeys:&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;NSArray&lt;/span&gt; &lt;span class='nl'&gt;arrayWithObjects:&lt;/span&gt;
+        	&lt;span class='s'&gt;@&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+        	&lt;span class='s'&gt;@&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+        	&lt;span class='s'&gt;@&amp;quot;token&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+    		&lt;span class='nb'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;
+    &lt;span class='p'&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;That is obviously unreadable. In the same manner as an NSString and an NSNumber, arrays and numbers are replaced with the @-notation @&lt;span /&gt; and @{}. Thus, the above code can be replaced with the following:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='n'&gt;NSDictionary&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;keyValuePairs&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; 
+	&lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='s'&gt;@&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;email&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;@&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;password&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;@&amp;quot;token&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;token&lt;/span&gt; &lt;span class='p'&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Piece of cake. Apple wins again.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AngelHack Summer 2012</title>
@@ -19,10 +89,10 @@
       <description>&lt;p&gt;25 Jun 2012 - Boston, MA&lt;/p&gt;
 &lt;!---
 Post content goes here.
---&gt;&lt;img alt='Angelhack Logo' src='/assets/images/post_images/angelhack/ahack_logo.png' style='float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' /&gt;
+--&gt;&lt;img src='/assets/images/post_images/angelhack/ahack_logo.png' style='float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' alt='Angelhack Logo' /&gt;
 &lt;p&gt;This morning, I returned from my first hackathon, &lt;a href='http://angelhack.com/'&gt;AngelHack&lt;/a&gt; in Boston. The &lt;a href='http://strabogis.com'&gt;Strabo&lt;/a&gt; crew teamed up with Middlebury students &lt;a href='http://www.teddyknox.me/'&gt;Teddy Knox&lt;/a&gt; and &lt;a href='http://worthbak.com/'&gt;Worth Baker&lt;/a&gt; to form Team Natarré. Of course I live-tweeted the whole thing (as did Worth) &lt;a href='https://twitter.com/#!/search/%23AngelHackBOS'&gt;#AngelHackBos&lt;/a&gt;, but I figured I should give it a more thorough overview in a blog post.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Team Hacks' src='/assets/images/post_images/angelhack/ahack_dinner.JPG' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/images/post_images/angelhack/ahack_dinner.JPG' alt='Team Hacks' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Because no one on the team had competed in a hackathon before, we didn&amp;#8217;t really know what to expect. We sat down the night before to decide what we wanted to build. After tossing a couple of ideas on the table, Worth suggested a story sharing social network. He pitched his idea, a website to showcase infrequently told and underappreciated yet powerful stories that would not otherwise have a stage. The idea was solid and we figured that technologically, it would be feasible to get an MVP built in our alloted 24 hours at AngelHack. It would be called Natarré.&lt;/p&gt;
 
@@ -32,11 +102,11 @@ Post content goes here.
 
 &lt;p&gt;Of particular note were the demos by &lt;a href='http://www.rim.com/'&gt;RIM&lt;/a&gt; and &lt;a href='http://www.microsoft.com/en-us/default.aspx'&gt;Microsoft&lt;/a&gt;. The Microsoft talk featured &lt;a href='http://www.windowsazure.com/en-us/'&gt;Windows Azure&lt;/a&gt;, their public cloud hosting solution. I have long been a Microsoft skeptic, and although the demo wasn&amp;#8217;t very good (they had some technical difficulties, although the fault was not thier own), the product looks excellent. I was impressed by the cross-platform virtual machine support and (surprise) the user interface of the management site. I haven&amp;#8217;t played around with Azure myself, but from what I can tell, they are at least on the same playing field as the best in the business, &lt;a href='http://www.heroku.com/'&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Our View' src='/assets/images/post_images/angelhack/ahack_boston.JPG' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/images/post_images/angelhack/ahack_boston.JPG' alt='Our View' /&gt;&lt;/p&gt;
 
 &lt;p&gt;The RIM talk was interesting because I had completely forgotten that &lt;a href='http://us.blackberry.com/'&gt;Blackberry&lt;/a&gt; was still a product. I have seen recent user data and app revenue charts that don&amp;#8217;t even include Blackberry devices as a category and they seemed completely gone from the market landscape (except for their occasional appearance in a &lt;a href='http://www.cbsnews.com/8301-505123_162-57460107/rim-shares-dive-to-nine-year-low-after-downgrade/'&gt;negative news&lt;/a&gt; article). With shares at an all time low, $9.36 at the end of the day on June 25, they are desperate to build developer support. If they have hope of surviving, they need a robust developer network and app marketplace to compete with Apple and Android. Of course, they completely understand this and seem to be trying to revamp their company and their product lineup. They seem to be doing everything they can to support developers and their new devices natively support a remarkable number of frameworks and languages. I also got my hands on the new playbook, which seems like a very cool piece of gear. I do like the user interface and I think they have some good ideas with the way that the touch screen includes gestures over the bezel. They are obviously working hard to deliver new products that suit both devs and customers.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Team Hacks' src='/assets/images/post_images/angelhack/ahack_team.JPG' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/images/post_images/angelhack/ahack_team.JPG' alt='Team Hacks' /&gt;&lt;/p&gt;
 
 &lt;h3 id='the_hack'&gt;The Hack&lt;/h3&gt;
 
@@ -44,7 +114,7 @@ Post content goes here.
 &lt;img src='/assets/images/post_images/angelhack/ahack_destruction.JPG' style='float: left;' /&gt;
 &lt;p&gt;Saturday night was long - I personally polished off enough Red Bull to kill a small hippopotamus. I was in charge of building the iPhone application, which was essentially a story reading app. The components of the app included the ability to login with your Natarré account (or create an account), view and sort lists of stories by most popular, most recent, tag stories as favorites, add them to a reading list for later consumption, and also view lists of your personal favorites or read-it-laters. Of course, all of the navigation controllers were written custom to support a custom interface and I did a reasonably complicated (for a hackathon) subclass of a table controller to support pull-to-refresh. Teddy spearheaded the Android app which needed similar functionality and Will wrote the web app, which he crafted on the Rails framework. Parker and Worth worked as a team to design the user interface and app flow and then made beautiful custom graphics for the whole thing. Later in the night, or should I say early in the morning, Worth made an exceptional marketing video to demonstrate our work and the idea behind Natarré to the judges.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Natarré' src='/assets/images/post_images/angelhack/iTunesArtwork.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/images/post_images/angelhack/iTunesArtwork.png' alt='Natarré' /&gt;&lt;/p&gt;
 
 &lt;h3 id='the_product'&gt;The Product&lt;/h3&gt;
 
@@ -56,13 +126,13 @@ Post content goes here.
 
 &lt;p&gt;For this competition, the team was excellent. I couldn&amp;#8217;t have asked to work with better programmers than Will and Teddy and Parker and Worth did a kickass job with UI, UX, marketing, product vision, and videography. We had many laughs and much fun even though we were plugged in and working hard. As I described before, we accomplished more than I thought was possible in such a short time, especially considering how little we had prepared ahead of the competition. Most of the credit goes to Worth on this one - Natarré was his brainchild and I hope he sticks with it and adds the features that we couldn&amp;#8217;t find time to build.&lt;/p&gt;
 
-&lt;p&gt;Although the ideas were there, however, the tech lacked something that some of the other teams seemed to conquer. While we spend a lot of time thinking how much more interesting our product was than some of the others and focusing on the overall vision, we failed to do something unique with sponsor API&amp;#8217;s and ended up not presenting the best tech to the judges. AngelHack is, after all, a hackathon. It is more a place to try to make bleeding edge, but buggy tech in a short time, not a place to develop a product. We built a social network with a like button and a reading list - it turns out that has been done before.&lt;/p&gt;
+&lt;p&gt;Although the ideas were there, however, the tech lacked something that some of the other teams seemed to conquer. While we spend a lot of time thinking about the interesting aspects of our product and focusing on the overall vision, we failed to do something unique with sponsor API&amp;#8217;s and ended up not presenting the best tech to the judges. AngelHack is, after all, a hackathon. It is more a place to try to make bleeding edge, but buggy tech in a short time, not a place to develop a product. We built a social network with a like button and a reading list - it turns out that has been done before.&lt;/p&gt;
 
 &lt;h3 id='the_future'&gt;The Future&lt;/h3&gt;
 
-&lt;p&gt;I look forward to entering another hackathon down the road. The energy at AngelHack Boston was great and the people that I met (most of whom were far better programmers than I) fully embodied the hacker culture - nice, helpful people who were interested in coding for the sake of the technology, not for the sake of the money.&lt;/p&gt;
+&lt;p&gt;I look forward to entering another hackathon down the road. The energy at AngelHack Boston was great and the people that I met (most of whom were far better programmers than I) fully embodied the hacker culture - nice, helpful people who were interested in coding for the sake of the technology, not for the sake of the money. It was a good networking experience and opened my eyes to new programming techniques and tools.&lt;/p&gt;
 
-&lt;p&gt;I also know not to show up at a hackathon and expect to develop a product - that is something that should be done in advance. Having flowcharts, mockups, ideas for graphics, drawings, frameworks, and a complete knowledge of tools to streamline the backend build will be a huge advantage in the future. If I make it to &lt;a href='http://techcrunch.com/events/disrupt-sf-2012/'&gt;Disrupt SF 2012&lt;/a&gt;, serious prior planning will be key, as will be the knowledge of backend products like &lt;a href='http://www.kinvey.com/'&gt;Kinvey&lt;/a&gt; and &lt;a href='http://www.kinvey.com/'&gt;CloudMine&lt;/a&gt;. I can&amp;#8217;t wait.&lt;/p&gt;</description>
+&lt;p&gt;I also know not to show up at a hackathon and expect to develop a product - that is something that should be planned in advance and executed after the code is complete. Having flowcharts, mockups, ideas for graphics, drawings, frameworks, and a complete knowledge of tools to streamline the backend build will be a huge advantage in the future. If I make it to &lt;a href='http://techcrunch.com/events/disrupt-sf-2012/'&gt;Disrupt SF 2012&lt;/a&gt;, serious prior planning will be key, as will be the knowledge of backend products like &lt;a href='http://www.kinvey.com/'&gt;Kinvey&lt;/a&gt; and &lt;a href='http://www.kinvey.com/'&gt;CloudMine&lt;/a&gt; and fast deployment services. I can&amp;#8217;t wait.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -158,7 +228,7 @@ Post content goes here.
 --&gt;
 &lt;p&gt;Now that I have the framework of my website constructed, I figured it would be a good time to write about how it is set up.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Jekyll Monster' src='/assets/images/post_images/jekyll.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/assets/images/post_images/jekyll.png' alt='Jekyll Monster' /&gt;&lt;/p&gt;
 
 &lt;p&gt;I decided to use Tom Preston-Werner&amp;#8217;s &lt;a href='https://github.com/mojombo/jekyll'&gt;Jekyll&lt;/a&gt; generator. Using Jekyll makes it easy to build new posts and pages quickly and in markdown (my favorite&amp;#8230; easy webdev). I hosted the site on &lt;a href='http://pages.github.com/'&gt;git pages&lt;/a&gt; because it is convenient to edit, push and track changes, and it&amp;#8217;s free (a big improvement over &lt;a href='http://www.fatcow.com/'&gt;FatCow&lt;/a&gt;, which costs me 56 bucks every year).&lt;/p&gt;
 
