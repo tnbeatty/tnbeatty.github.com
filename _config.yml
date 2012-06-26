@@ -12,7 +12,7 @@ pygments: true
 auto: true
 
 # Do not publish posts with future date
-future: true
+future: false
 
 # Late Symantic Indexing
 lsi: true
