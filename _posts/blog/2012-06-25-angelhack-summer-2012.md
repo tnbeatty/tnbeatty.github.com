@@ -1,6 +1,7 @@
 ---
 layout: blog_post
 title: AngelHack Summer 2012
+abstract: An overview of my experience at AngelHack in Boston this summer.
 category: blog
 tags: angelhack hackathon ios RIM Blackberry Windows Azure Apple cocoa Natarré
 ---
@@ -13,7 +14,7 @@ Post content goes here.
 
 <img src="/assets/images/post_images/angelhack/ahack_logo.png" style="float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;" alt="Angelhack Logo"/>
 
-This morning, I returned from my first hackathon, [AngelHack](http://angelhack.com/) in Boston. The [Strabo](http://strabogis.com) crew teamed up with Middlebury students [Teddy Knox](http://www.teddyknox.me/) and [Worth Baker](http://worthbak.com/) to form Team Natarré.
+This morning, I returned from my first hackathon, [AngelHack](http://angelhack.com/) in Boston. The [Strabo](http://strabogis.com) crew teamed up with Middlebury students [Teddy Knox](http://www.teddyknox.me/) and [Worth Baker](http://worthbak.com/) to form Team Natarré. Of course I live-tweeted the whole thing (as did Worth) [#AngelHackBos](https://twitter.com/#!/search/%23AngelHackBOS), but I figured I should give it a more thorough overview in a blog post.
 
 ![Team Hacks](/assets/images/post_images/angelhack/ahack_dinner.JPG)
 

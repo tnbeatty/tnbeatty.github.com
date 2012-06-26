@@ -1,6 +1,7 @@
 ---
 layout: blog_post
 title: Website Construction with Jekyll
+abstract: How I configured my Jekyll site - because writing about how you built your jekyll site if you used jekyll to build your site seems to be a trend among devs.
 category: blog
 tags: Jekyll SASS CSS Sublime Github Pages
 ---

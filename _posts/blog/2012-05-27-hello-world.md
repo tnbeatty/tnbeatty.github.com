@@ -1,6 +1,7 @@
 ---
 layout: blog_post
 title: Hello World
+abstract: An entirely new blog about tech and physics... it's for dorks.
 category: blog
 tags: Website
 ---

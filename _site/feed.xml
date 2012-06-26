@@ -6,21 +6,21 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Tue, 26 Jun 2012 00:21:04 -0400</pubDate>
-    <lastBuildDate>Tue, 26 Jun 2012 00:21:04 -0400</lastBuildDate>
+    <pubDate>Tue, 26 Jun 2012 00:39:42 -0400</pubDate>
+    <lastBuildDate>Tue, 26 Jun 2012 00:39:42 -0400</lastBuildDate>
 
     
     <item>
       <title>AngelHack Summer 2012</title>
-      <link>http://tnbeatty.github.com/blog/2012/06/26/angelhack-summer-2012.html</link>
-      <pubDate>Tue, 26 Jun 2012 00:00:00 -0400</pubDate>
+      <link>http://tnbeatty.github.com/blog/2012/06/25/angelhack-summer-2012.html</link>
+      <pubDate>Mon, 25 Jun 2012 00:00:00 -0400</pubDate>
       <author>nate@strabogis.com (Nate Beatty)</author>
-      <guid>http://tnbeatty.github.com/blog/2012/06/26/angelhack-summer-2012</guid>
-      <description>&lt;p&gt;26 Jun 2012 - Boston, MA&lt;/p&gt;
+      <guid>http://tnbeatty.github.com/blog/2012/06/25/angelhack-summer-2012</guid>
+      <description>&lt;p&gt;25 Jun 2012 - Boston, MA&lt;/p&gt;
 &lt;!---
 Post content goes here.
---&gt;&lt;img style='float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' alt='Angelhack Logo' src='/assets/images/post_images/angelhack/ahack_logo.png' /&gt;
-&lt;p&gt;This morning, I returned from my first hackathon, &lt;a href='http://angelhack.com/'&gt;AngelHack&lt;/a&gt; in Boston. The &lt;a href='http://strabogis.com'&gt;Strabo&lt;/a&gt; crew teamed up with Middlebury students &lt;a href='http://www.teddyknox.me/'&gt;Teddy Knox&lt;/a&gt; and &lt;a href='http://worthbak.com/'&gt;Worth Baker&lt;/a&gt; to form Team Natarré.&lt;/p&gt;
+--&gt;&lt;img alt='Angelhack Logo' src='/assets/images/post_images/angelhack/ahack_logo.png' style='float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' /&gt;
+&lt;p&gt;This morning, I returned from my first hackathon, &lt;a href='http://angelhack.com/'&gt;AngelHack&lt;/a&gt; in Boston. The &lt;a href='http://strabogis.com'&gt;Strabo&lt;/a&gt; crew teamed up with Middlebury students &lt;a href='http://www.teddyknox.me/'&gt;Teddy Knox&lt;/a&gt; and &lt;a href='http://worthbak.com/'&gt;Worth Baker&lt;/a&gt; to form Team Natarré. Of course I live-tweeted the whole thing (as did Worth) &lt;a href='https://twitter.com/#!/search/%23AngelHackBOS'&gt;#AngelHackBos&lt;/a&gt;, but I figured I should give it a more thorough overview in a blog post.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt='Team Hacks' src='/assets/images/post_images/angelhack/ahack_dinner.JPG' /&gt;&lt;/p&gt;
 
@@ -41,7 +41,7 @@ Post content goes here.
 &lt;h3 id='the_hack'&gt;The Hack&lt;/h3&gt;
 
 &lt;p&gt;After a delicious lunch generously sponsored by &lt;a href='http://www.wholefoodsmarket.com/'&gt;Whole Foods&lt;/a&gt; and a visit to the local Apple Store and Best Buy, we settled back into the NERD center for our 2:00pm coding starttime. At that point, we still had to develop the app idea, hammer out a user interface, build and API spec, and figure out our workflow as a team before we could even put eyes on the screen and fingers on the keyboard. It was nearing dinnertime before I had even opened xcode and I made my first real commit after dinner at about 9:00pm after the completion of the login models, views, and controllers. At that point, I grabbed my first of two beers (yay, open bar!) and started to hack away at the view layout.&lt;/p&gt;
-&lt;img style='float: left;' src='/assets/images/post_images/angelhack/ahack_destruction.JPG' /&gt;
+&lt;img src='/assets/images/post_images/angelhack/ahack_destruction.JPG' style='float: left;' /&gt;
 &lt;p&gt;Saturday night was long - I personally polished off enough Red Bull to kill a small hippopotamus. I was in charge of building the iPhone application, which was essentially a story reading app. The components of the app included the ability to login with your Natarré account (or create an account), view and sort lists of stories by most popular, most recent, tag stories as favorites, add them to a reading list for later consumption, and also view lists of your personal favorites or read-it-laters. Of course, all of the navigation controllers were written custom to support a custom interface and I did a reasonably complicated (for a hackathon) subclass of a table controller to support pull-to-refresh. Teddy spearheaded the Android app which needed similar functionality and Will wrote the web app, which he crafted on the Rails framework. Parker and Worth worked as a team to design the user interface and app flow and then made beautiful custom graphics for the whole thing. Later in the night, or should I say early in the morning, Worth made an exceptional marketing video to demonstrate our work and the idea behind Natarré to the judges.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt='Natarré' src='/assets/images/post_images/angelhack/iTunesArtwork.png' /&gt;&lt;/p&gt;

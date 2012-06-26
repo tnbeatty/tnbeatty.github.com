@@ -1,6 +1,7 @@
 ---
 layout: blog_post
 title: iOS Device Rotation
+abstract: How I made individual views rotate when UIDevice senses an orientation change without actually having to change a view controller's UIInterfaceOrientation state.
 category: blog
 tags: iOS iPhone Objective-C
 ---
