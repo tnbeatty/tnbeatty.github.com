@@ -16,6 +16,8 @@ For those interested, the project source code is hosted on [github](https://gith
 
 Also, *go/* links are accessible from any computer using the search box on my [Farmstand](http://middfarmstand.heroku.com) site, which is still in alpha.
 
+If you are unable to install the plugin or run into any problems, feel free to send me an email at [nate@strabogis.com](mailto:nate@strabogis.com).
+
 For Safari
 ---
 
