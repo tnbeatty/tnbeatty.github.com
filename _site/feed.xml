@@ -6,9 +6,20 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Tue, 30 Oct 2012 12:55:45 -0400</pubDate>
-    <lastBuildDate>Tue, 30 Oct 2012 12:55:45 -0400</lastBuildDate>
+    <pubDate>Wed, 31 Oct 2012 13:09:01 -0400</pubDate>
+    <lastBuildDate>Wed, 31 Oct 2012 13:09:01 -0400</lastBuildDate>
 
+    
+    <item>
+      <title>Go Fix for Safari</title>
+      <link>http://tnbeatty.github.com/blog/2012/10/31/go-fix-for-safari.html</link>
+      <pubDate>Wed, 31 Oct 2012 00:00:00 -0400</pubDate>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2012/10/31/go-fix-for-safari</guid>
+      <description>&lt;p&gt;31 Oct 2012 - Madison, CT&lt;/p&gt;
+
+&lt;p&gt;Today marks the release of the beta version of a Safari extension that I have been working on. The purpose of the extension is to allow on and off campus access to the Middlebury College &amp;#8216;go/&amp;#8217; system. &lt;a href='https://raw.github.com/tnbeatty/Middlebury-Go-Fix/master/Middlebury%20Go%20Fix.safariextz'&gt;Download&lt;/a&gt; the extension from the &lt;a href='https://github.com/tnbeatty/Middlebury-Go-Fix'&gt;git repo&lt;/a&gt; and install it. It auto-updates to the latest version and should allow you full access to &lt;em&gt;go/&lt;/em&gt; links from anywhere. View the &lt;a href='/projects/2012/10/27/go-for-safari.html'&gt;project&lt;/a&gt; for more details.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Static Library Bug</title>
@@ -21,7 +32,11 @@
 &amp;lt;!---
 Post content goes here.
 --&amp;gt;&lt;/pre&gt;
-&lt;p&gt;Apple&amp;#8217;s &lt;a href='https://developer.apple.com/library/mac/#qa/qa2006/qa1490.html'&gt;response&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;While trying to build a static library, I re-discovered a bug which causes categories to be excluded from the compiled .a library file. Apple has documented the issue.&lt;/p&gt;
+
+&lt;p&gt;Apple&amp;#8217;s &lt;a href='https://developer.apple.com/library/mac/#qa/qa2006/qa1490.html'&gt;response&lt;/a&gt; to a previous inquery.&lt;/p&gt;
+
+&lt;p&gt;I figured I would post this here as it took me a while to dig up.&lt;/p&gt;</description>
     </item>
     
     <item>
