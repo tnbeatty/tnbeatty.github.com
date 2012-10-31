@@ -88,8 +88,11 @@ a:hover {
 code {
 
 }
-ul {
-	margin-left: 20px;
+ul, ol {
+	margin-left: 25px;
+}
+li {
+	margin: 5px 0;
 }
 
 .header {
