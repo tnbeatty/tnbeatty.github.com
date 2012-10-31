@@ -12,4 +12,8 @@ tags: Objective-C Cocoa Apple iOS iOS6 bug bugs bugfix static library
 Post content goes here.
 -->
 
-Apple's [response](https://developer.apple.com/library/mac/#qa/qa2006/qa1490.html).
+While trying to build a static library, I re-discovered a bug which causes categories to be excluded from the compiled .a library file. Apple has documented the issue.
+
+Apple's [response](https://developer.apple.com/library/mac/#qa/qa2006/qa1490.html) to a previous inquery.
+
+I figured I would post this here as it took me a while to dig up.
