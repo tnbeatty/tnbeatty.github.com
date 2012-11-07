@@ -9,16 +9,16 @@ abstract: An extension to enable access to the Middlebury College 'go/' system i
 ---
 
 <script>
-	// Get Safari Manifest
-	xmlhttp = new XMLHttpRequest();
-	xmlhttp.overrideMimeType('text/xml');
-	xmlhttp.open("GET","https://raw.github.com/tnbeatty/Middlebury-Go-Fix/master/safari_manifest.plist",false);
-	xmlhttp.send();
-	xmlDoc = xmlhttp.responseXML; 
+	// // Get Safari Manifest
+	// xmlhttp = new XMLHttpRequest();
+	// xmlhttp.overrideMimeType('text/xml');
+	// xmlhttp.open("GET","https://raw.github.com/tnbeatty/Middlebury-Go-Fix/master/safari_manifest.plist",false);
+	// xmlhttp.send();
+	// xmlDoc = xmlhttp.responseXML; 
 
-	// Get version elements
-	var eltArray = xmlDoc.getElementsByTagName("string");
-	document.write("<p>"+"asdf</p>");
+	// // Get version elements
+	// var eltArray = xmlDoc.getElementsByTagName("string");
+	// document.write("<p>"+"asdf</p>");
 </script>
 
 For years, Middlebury College Library and Information Services has implemented a feature on campus which redirects URI requests with the prefix "go/" to unique URLs defined by individual college community members. This system has become nearly universally adopted for accessing college websites by the community.
