@@ -8,7 +8,7 @@ tags: Objective-C Cocoa Apple iOS iOS6 Object Literals Modern Synthesize Propert
 
 {{ page.date | date_to_string }} - Madison, CT
 
-<!---
+<!--
 Post content goes here.
 -->
 

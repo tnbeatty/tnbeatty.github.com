@@ -8,7 +8,7 @@ tags: Website
 
 {{ page.date | date_to_string }} - Madison, CT
 
-<!---
+<!--
 Post content goes here.
 -->
 

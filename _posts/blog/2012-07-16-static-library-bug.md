@@ -8,7 +8,7 @@ tags: Objective-C Cocoa Apple iOS iOS6 bug bugs bugfix static library
 
 {{ page.date | date_to_string }} - Madison, CT
 
-<!---
+<!--
 Post content goes here.
 -->
 

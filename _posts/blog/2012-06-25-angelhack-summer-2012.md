@@ -8,7 +8,7 @@ tags: angelhack hackathon ios RIM Blackberry Windows Azure Apple cocoa Natarré
 
 {{ page.date | date_to_string }} - Boston, MA
 
-<!---
+<!--
 Post content goes here.
 -->
 

@@ -8,7 +8,7 @@ tags: iOS iPhone Objective-C
 
 {{ page.date | date_to_string }} - Woodstock, VT
 
-<!---
+<!--
 Post content goes here.
 -->
 

@@ -8,19 +8,6 @@ twitter:
 abstract: An extension to enable access to the Middlebury College 'go/' system in the Safari 6 omni-box.
 ---
 
-<script>
-	// // Get Safari Manifest
-	// xmlhttp = new XMLHttpRequest();
-	// xmlhttp.overrideMimeType('text/xml');
-	// xmlhttp.open("GET","https://raw.github.com/tnbeatty/Middlebury-Go-Fix/master/safari_manifest.plist",false);
-	// xmlhttp.send();
-	// xmlDoc = xmlhttp.responseXML; 
-
-	// // Get version elements
-	// var eltArray = xmlDoc.getElementsByTagName("string");
-	// document.write("<p>"+"asdf</p>");
-</script>
-
 For years, Middlebury College Library and Information Services has implemented a feature on campus which redirects URI requests with the prefix "go/" to unique URLs defined by individual college community members. This system has become nearly universally adopted for accessing college websites by the community.
 
 Many modern browsers have recently switched to "omnibars" which recognize *go/* URI's as searches rather than requests to the Middlebury system. Furthermore, even when using an old browser, *go/* links are only handled by the Middlebury servers. Thus, the *go/* system is only accessible from outside of the Middlebury local network by using the URL "go.middlebury.edu/". The plugins contained within this repository attempt to remedy both of these problems by redirecting *go/* requests to the appropriate URI.
@@ -43,19 +30,15 @@ For Safari (6.0 or better)
 For Chrome (22.0 or better)
 ---
 
-#####Current Version: 1.1.0
+#####Current Version: 1.2.2
 
-Alpha version of the extension released! I will release a beta soon. That version will auto-update and will be downloadable from the Google Web App store.
+The Beta version for Google Chrome is now available on the Google Web Store.
 
-To install the alpha:
+To install:
 
-1. Download the extension [here](https://raw.github.com/tnbeatty/Middlebury-Go-Fix/master/Middlebury%20Go%20Fix_Chrome.crx).
-2. Open Chrome and go to preferences under "Chrome" ( cmd - , ).
-3. On the left side of the browser window, select "Extensions."
-4. Locate the extension file that you downloaded (it should be "Middlebury Go Fix_Chrome.crx) and drag it into the browser "settings" window.
-5. You will be prompted to grant the app permission to view your browsing data. The app has access to the URLs that you type in order to determine if they are go/ links - it does not store the data in any way (if you're worried about it, don't download the alpha. If you're tech savvy, check out the git repo and see how it works for yourself).
-6. Click [here](http://go/fixgo) to "train" chrome that *go/* should be interpreted as an http request.
-7. Use *go/* on and off campus to your heart's content.
+1. Install the extension from the [Google Web Store](https://chrome.google.com/webstore/detail/middlebury-go/iknpplmmagmemgmhannnfjmcpkeppdef) by clicking [here](https://chrome.google.com/webstore/detail/middlebury-go/iknpplmmagmemgmhannnfjmcpkeppdef) and then selecting "add to chrome."
+2. Click [here](http://go/fixgo) to "train" chrome that *go/* should be interpreted as an http request.
+3. Use *go/* on and off campus to your heart's content.
 
 For Firefox
 ---

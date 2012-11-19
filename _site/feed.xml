@@ -6,8 +6,8 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Wed, 07 Nov 2012 08:38:01 -0500</pubDate>
-    <lastBuildDate>Wed, 07 Nov 2012 08:38:01 -0500</lastBuildDate>
+    <pubDate>Mon, 19 Nov 2012 14:09:32 -0500</pubDate>
+    <lastBuildDate>Mon, 19 Nov 2012 14:09:32 -0500</lastBuildDate>
 
     
     <item>
@@ -28,10 +28,9 @@
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/07/16/static-library-bug</guid>
       <description>&lt;p&gt;16 Jul 2012 - Madison, CT&lt;/p&gt;
-&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;!---
+&lt;!--
 Post content goes here.
---&amp;gt;&lt;/pre&gt;
+--&gt;
 &lt;p&gt;While trying to build a static library, I re-discovered a bug which causes categories to be excluded from the compiled .a library file. Apple has documented the issue.&lt;/p&gt;
 
 &lt;p&gt;Apple&amp;#8217;s &lt;a href='https://developer.apple.com/library/mac/#qa/qa2006/qa1490.html'&gt;response&lt;/a&gt; to a previous inquery.&lt;/p&gt;
@@ -46,10 +45,9 @@ Post content goes here.
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/06/29/modern-objective-c</guid>
       <description>&lt;p&gt;29 Jun 2012 - Madison, CT&lt;/p&gt;
-&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;!---
+&lt;!--
 Post content goes here.
---&amp;gt;&lt;/pre&gt;
+--&gt;
 &lt;p&gt;Today I watched a couple of &lt;a href='https://developer.apple.com/wwdc/'&gt;WWDC talks&lt;/a&gt; to stay current with Cocoa and modern Objective-C. It turns out that Apple has made some particularly helpful changes this year that will substantially improve the organization and readability of my code. I am very impressed with the power and complexity of Apple&amp;#8217;s compiler design - it is truly extraordinary.&lt;/p&gt;
 
 &lt;h2 id='accessor_generation'&gt;Accessor Generation&lt;/h2&gt;
@@ -94,10 +92,9 @@ Post content goes here.
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/06/25/angelhack-summer-2012</guid>
       <description>&lt;p&gt;25 Jun 2012 - Boston, MA&lt;/p&gt;
-&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;!---
+&lt;!--
 Post content goes here.
---&amp;gt;&lt;/pre&gt;&lt;img alt='Angelhack Logo' src='/assets/images/post_images/angelhack/ahack_logo.png' style='float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' /&gt;
+--&gt;&lt;img alt='Angelhack Logo' src='/assets/images/post_images/angelhack/ahack_logo.png' style='float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' /&gt;
 &lt;p&gt;This morning, I returned from my first hackathon, &lt;a href='http://angelhack.com/'&gt;AngelHack&lt;/a&gt; in Boston. The &lt;a href='http://strabogis.com'&gt;Strabo&lt;/a&gt; crew teamed up with Middlebury students &lt;a href='http://www.teddyknox.me/'&gt;Teddy Knox&lt;/a&gt; and &lt;a href='http://worthbak.com/'&gt;Worth Baker&lt;/a&gt; to form Team Natarré. Of course I live-tweeted the whole thing (as did Worth) &lt;a href='https://twitter.com/#!/search/%23AngelHackBOS'&gt;#AngelHackBos&lt;/a&gt;, but I figured I should give it a more thorough overview in a blog post.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt='Team Hacks' src='/assets/images/post_images/angelhack/ahack_dinner.JPG' /&gt;&lt;/p&gt;
@@ -150,10 +147,9 @@ Post content goes here.
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/06/10/iOS-device-rotation</guid>
       <description>&lt;p&gt;10 Jun 2012 - Woodstock, VT&lt;/p&gt;
-&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;!---
+&lt;!--
 Post content goes here.
---&amp;gt;&lt;/pre&gt;
+--&gt;
 &lt;p&gt;You can handle device orientation changes in a number of different ways in iOS. The standard way is to let the device call a delegate method within each view controller and change any UI elements to fit the new dimensions. If we just need to rotate UI elements onscreen and don&amp;#8217;t want to actually change the device UI Interface Orientation, things get a little more complicated.&lt;/p&gt;
 
 &lt;h3 id='standard_orientation_handling'&gt;Standard Orientation Handling&lt;/h3&gt;
@@ -206,10 +202,9 @@ Post content goes here.
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/06/02/website-construction-with-jekyll</guid>
       <description>&lt;p&gt;02 Jun 2012 - Woodstock, VT&lt;/p&gt;
-&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;!---
+&lt;!--
 Post content goes here.
---&amp;gt;&lt;/pre&gt;
+--&gt;
 &lt;p&gt;Now that I have the framework of my website constructed, I figured it would be a good time to write about how it is set up.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt='Jekyll Monster' src='/assets/images/post_images/jekyll.png' /&gt;&lt;/p&gt;
@@ -261,10 +256,9 @@ Post content goes here.
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/05/27/hello-world</guid>
       <description>&lt;p&gt;27 May 2012 - Madison, CT&lt;/p&gt;
-&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
-&amp;lt;!---
+&lt;!--
 Post content goes here.
---&amp;gt;&lt;/pre&gt;
+--&gt;
 &lt;p&gt;Welcome to my blog! Hopefully, I will have a chance to post regularly about things which interest me. The topic will mostly be limited to coding - tips and tricks that I discover throughout the course of my work - and the occasional reference to physics or cycling.&lt;/p&gt;
 
 &lt;p&gt;I built this website to replace my previous site, &lt;a href='http://natebeatty.com'&gt;natebeatty.com&lt;/a&gt;.&lt;/p&gt;

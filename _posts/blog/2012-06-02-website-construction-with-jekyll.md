@@ -8,7 +8,7 @@ tags: Jekyll SASS CSS Sublime Github Pages
 
 {{ page.date | date_to_string }} - Woodstock, VT
 
-<!---
+<!--
 Post content goes here.
 -->
 
