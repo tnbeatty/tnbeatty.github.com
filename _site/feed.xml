@@ -6,9 +6,44 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Mon, 19 Nov 2012 14:09:32 -0500</pubDate>
-    <lastBuildDate>Mon, 19 Nov 2012 14:09:32 -0500</lastBuildDate>
+    <pubDate>Mon, 19 Nov 2012 17:16:15 -0500</pubDate>
+    <lastBuildDate>Mon, 19 Nov 2012 17:16:15 -0500</lastBuildDate>
 
+    
+    <item>
+      <title>Middlebury Go for Chrome</title>
+      <link>http://tnbeatty.github.com/blog/2012/11/19/middlebury-go-for-chrome.html</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 -0500</pubDate>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2012/11/19/middlebury-go-for-chrome</guid>
+      <description>&lt;p&gt;19 Nov 2012 - Middlebury, VT&lt;/p&gt;
+&lt;img alt='' src='/assets/images/post_images/go_WebStore.png' style='float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 400px;' /&gt;
+&lt;p&gt;After testing an Alpha version of the Middlebury Go Fix for Chrome for a couple of weeks, I released a beta version of the extension to the Google Web Store today. You can find installation instructions along with more information about the extension on the &lt;a href='/projects/2012/10/27/go-for-safari.html'&gt;project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id='what_does_it_do'&gt;What does it do?&lt;/h3&gt;
+
+&lt;p&gt;For a while, Middlebury College has implemented a system that redirects HTTP requests directed at &lt;code&gt;go&lt;/code&gt; to &lt;code&gt;go.middlebury.edu&lt;/code&gt;, which, in turn, redirects the user to a unique link corresponding to whatever subdirectory is specified after the top level &lt;code&gt;go&lt;/code&gt;. For example, &lt;code&gt;go/portal&lt;/code&gt; redirects to &lt;code&gt;http://portal.middlebury.edu/home/&lt;/code&gt; and &lt;code&gt;go/mmu&lt;/code&gt; redirects to &lt;code&gt;http://www.middmusic.com&lt;/code&gt;. Students are free to creat shortcuts of their own at will. This is convenient for creating shortcuts to websites for the purposes of advertising, etc, on campus.&lt;/p&gt;
+
+&lt;p&gt;Students have gotten used to typing &amp;#8216;go/&amp;#8230;&amp;#8217; into the address bar of their web browsers and many of us forget that we can only access this service while on campus. It is a bit of a headache to get to a coffee shop or to return home and realize that &lt;code&gt;go/...&lt;/code&gt; &amp;#8220;cannot be found&amp;#8221; by your computer. Thus, I created an extension for Safari 6 which allows a user to type a &lt;code&gt;go/...&lt;/code&gt; link into the omnibar and have it redirect to the proper page. Today, I published a similar version of the extension for Google Chrome.&lt;/p&gt;
+
+&lt;h3 id='removing_the_alpha_version'&gt;Removing the Alpha Version&lt;/h3&gt;
+
+&lt;p&gt;If you already downloaded my extension for Chrome while it was in Alpha, you&amp;#8217;ll want to remove it and download the new version from the Google Web Store. This will allow you to receive any updates automatically as they become available. Uninstalling the Alpha is pretty simple:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open up your Google Chrome browser&lt;/li&gt;
+
+&lt;li&gt;Open Preferences by pressing &lt;code&gt;Cmd + ,&lt;/code&gt; or selecting Chrome &amp;gt; Preferences.&lt;/li&gt;
+
+&lt;li&gt;Click on &lt;code&gt;Extensions&lt;/code&gt; on the upper left side of the page.&lt;/li&gt;
+
+&lt;li&gt;Find &amp;#8220;Middlebury Go&amp;#8221; in the list of extensions and click on the corresponding trash can icon to the right of the extension title.&lt;/li&gt;
+
+&lt;li&gt;Download the beta from the app store &lt;a href='https://chrome.google.com/webstore/detail/middlebury-go/iknpplmmagmemgmhannnfjmcpkeppdef'&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thanks a lot for testing Middlebury Go before I knew how well it worked!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Go Fix for Safari</title>
@@ -16,7 +51,7 @@
       <pubDate>Wed, 31 Oct 2012 00:00:00 -0400</pubDate>
       <author>nate@strabogis.com (Nate Beatty)</author>
       <guid>http://tnbeatty.github.com/blog/2012/10/31/go-fix-for-safari</guid>
-      <description>&lt;p&gt;31 Oct 2012 - Madison, CT&lt;/p&gt;
+      <description>&lt;p&gt;31 Oct 2012 - Middlebury, VT&lt;/p&gt;
 
 &lt;p&gt;Today marks the release of the beta version of a Safari extension that I have been working on. The purpose of the extension is to allow on and off campus access to the Middlebury College &amp;#8216;go/&amp;#8217; system. &lt;a href='https://raw.github.com/tnbeatty/Middlebury-Go-Fix/master/Middlebury%20Go%20Fix.safariextz'&gt;Download&lt;/a&gt; the extension from the &lt;a href='https://github.com/tnbeatty/Middlebury-Go-Fix'&gt;git repo&lt;/a&gt; and install it. It auto-updates to the latest version and should allow you full access to &lt;em&gt;go/&lt;/em&gt; links from anywhere. View the &lt;a href='/projects/2012/10/27/go-for-safari.html'&gt;project&lt;/a&gt; for more details.&lt;/p&gt;</description>
     </item>
