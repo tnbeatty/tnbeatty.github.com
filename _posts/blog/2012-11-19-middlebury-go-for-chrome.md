@@ -3,7 +3,7 @@ layout: blog_post
 title: Middlebury Go for Chrome
 abstract: Today I released the Chrome version of my Middlebury Go fix. This Google Chrome extension allows users to access go/ URI's both on and off campus.
 category: blog
-tags: Safari Middlebury College Go Extension Apple
+tags: Chrome Middlebury College Go Extension
 ---
 
 {{ page.date | date_to_string }} - Middlebury, VT

@@ -15,4 +15,4 @@ auto: true
 future: false
 
 # Late Symantic Indexing
-lsi: true
+lsi: false

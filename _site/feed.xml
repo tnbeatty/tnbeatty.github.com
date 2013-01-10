@@ -6,9 +6,34 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Mon, 19 Nov 2012 17:16:15 -0500</pubDate>
-    <lastBuildDate>Mon, 19 Nov 2012 17:16:15 -0500</lastBuildDate>
+    <pubDate>Thu, 10 Jan 2013 18:37:57 -0500</pubDate>
+    <lastBuildDate>Thu, 10 Jan 2013 18:37:57 -0500</lastBuildDate>
 
+    
+    <item>
+      <title>Middlebury Menus</title>
+      <link>http://tnbeatty.github.com/blog/2013/01/10/middlebury-menus.html</link>
+      <pubDate>Thu, 10 Jan 2013 00:00:00 -0500</pubDate>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2013/01/10/middlebury-menus</guid>
+      <description>&lt;p&gt;10 Jan 2013 - Middlebury, VT&lt;/p&gt;
+
+&lt;p&gt;Last summer, I created &lt;a href='http://middfarmstand.heroku.com'&gt;middfarmstand.com&lt;/a&gt;, still in an unfinished alpha and hosted on Heroku, to be a one-stop-shop for Middlebury events, menus, and news. Although I don&amp;#8217;t like the idea of a &amp;#8220;one size fits all&amp;#8221; web solution like &lt;a href='http://portal.middlebury.edu'&gt;the Middlebury portal&lt;/a&gt;, I think a site which aggregates only the most important online information from various parts of the Middlebury web could be both helpful and very popular. Three times every day, I check &lt;a href='http://go.middlebury.edu/menu'&gt;go/menu&lt;/a&gt; to decide where on campus I want to eat my next meal.&lt;/p&gt;
+&lt;img alt='' src='/assets/images/post_images/middmenus/sketch1.JPG' style='float: right; box-shadow: none; margin: 10px; width: 300px;' /&gt;
+&lt;p&gt;Right now, there are a couple of options to get Middlebury dining menus on a mobile device:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href='http://menus.middlebury.edu'&gt;menus.middlebury.edu&lt;/a&gt; : Poorly formatted and difficult to read on a small screen.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://portal.middlebury.edu'&gt;portal.middlebury.edu&lt;/a&gt; : Requires the navigation of no fewer than three different menus to retrieve each menu. Even when you can arrive at the desired page, the formatting is sometimes so poor that the food listings are unreadable.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I have been approached by a number of different people who want to make a dining menu application. Unfortunately, none of them are iOS programmers and although their ideas are excellent and the feature sets for their apps are well designed and carefully planned, their production timelines are all pretty distant. In the meantime, I have designed my own menu application and plan to code it and release it. Hopefully, it will serve as a good alternative until one of my peers releases an app which is sure to be far superior.&lt;/p&gt;
+
+&lt;p&gt;The application consists of one main view. On the iPhone, three tabs at the top allow the user to select a dining hall and the main screen below shows the menu for the next available meal. The user can flip the page to view the menu for the next or previous meal. On the iPad, all three dining hall menus are displayed simultaneously. Meals are cached a number of days in advance, so whether you are online or offline, sitting in a WIFI classroom, or walking across the beach reading your iPad, you will always be able to browse the menu - no waiting for Portal pages to load.&lt;/p&gt;
+
+&lt;p&gt;If you have any thoughts or suggestions, please let me know. Fire me an email at &lt;a href='mailto:nate@strabogis.com'&gt;nate@strabogis.com&lt;/a&gt;. Thanks for your help! I&amp;#8217;ll provide updates on my site and posts to my blog as I make more progress and eventually submit the app to the Apple app store.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Middlebury Go for Chrome</title>
