@@ -6,9 +6,144 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Thu, 10 Jan 2013 18:37:57 -0500</pubDate>
-    <lastBuildDate>Thu, 10 Jan 2013 18:37:57 -0500</lastBuildDate>
+    <pubDate>Sun, 13 Jan 2013 16:10:43 -0500</pubDate>
+    <lastBuildDate>Sun, 13 Jan 2013 16:10:43 -0500</lastBuildDate>
 
+    
+    <item>
+      <title>Apple OS 9 Emulation</title>
+      <link>http://tnbeatty.github.com/blog/2013/01/13/os-9-emulation.html</link>
+      <pubDate>Sun, 13 Jan 2013 00:00:00 -0500</pubDate>
+      <author>nate@strabogis.com (Nate Beatty)</author>
+      <guid>http://tnbeatty.github.com/blog/2013/01/13/os-9-emulation</guid>
+      <description>&lt;p&gt;13 Jan 2013 - Middlebury, VT&lt;/p&gt;
+
+&lt;p&gt;Fifteen years ago, I had &lt;a href='http://en.wikipedia.org/wiki/Power_Pete'&gt;Power Pete&lt;/a&gt; (the first 1995 release of the precursor to the renamed 2001 software, MightyMike) installed on an old Macintosh &lt;a href='http://en.wikipedia.org/wiki/Power_Macintosh_6200'&gt;Performa 64&lt;/a&gt;. The Performa was a solid machine and ran Power Pete wonderfully. Occasional hiccups during particularly intense robot, bunny, and dinosour battles only added to its charm. Power pete was one of the few PC games that I played religiously, and I am sorry to report that he has been lost since my childhood.&lt;/p&gt;
+&lt;img alt='Dead Power Pete' src='/assets/images/post_images/mightymike_grave.png' style='float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px;' /&gt;
+&lt;p&gt;Now, the Performa 64 is long gone and &lt;a href='http://pangeasoft.net'&gt;Pangea Software&lt;/a&gt; never re-released Mighty Mike for Intel macs. A few days ago, I set out to resurrect Power Pete from his grave beneath Prehistoric Plaza. The biggest challenge was finding a way to run the old PowerPC software, especially because my modern mac OS no longer supports Apple&amp;#8217;s &lt;a href='http://en.wikipedia.org/wiki/Classic_Environment'&gt;Classic Environment&lt;/a&gt;. The task needed to be completed as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Find a PowerPC Emulator&lt;/li&gt;
+
+&lt;li&gt;Get it running Mac OS 9&lt;/li&gt;
+
+&lt;li&gt;Install Power Pete from old versions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;With a couple of emulators out there, both downloadable apps, and binaries that you need to compile yourself, it is difficult to know what will work best on your mac. There are also different ROM&amp;#8217;s, as well as different classic operating systems and even two seperate installations of Power Pete! It took me a while to sift through all of the information and do some custom tweaking. If you have a modern Intel mac running OS X (I have 10.8.2), you can start plugging away at bears with your nerf launcher, saving bunnies, and eating fruit before you know it. The whole process shouldn&amp;#8217;t take more than about 15 minutes; I&amp;#8217;ll walk you through it.&lt;/p&gt;
+
+&lt;h3 id='installing_the_emulator'&gt;Installing the Emulator&lt;/h3&gt;
+
+&lt;p&gt;First, you&amp;#8217;re going to need a PowerPC Emulator. Essentially, this is a software program that translates program commands from code that runs on an old Apple processor into code that runs on a new Intel processor (like the one you probably have in your macbook). The best one that I have found is an open source project called &lt;a href='http://sheepshaver.cebix.net'&gt;Sheep Shaver&lt;/a&gt; (a &amp;#8220;Shape Shifter&amp;#8221; pun that relates to an even earlier mac emulator). For those interested, the git repo for the code is &lt;a href='https://github.com/cebix/macemu'&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id='the_steps'&gt;The Steps:&lt;/h4&gt;
+&lt;img alt='Finder Window' src='/assets/images/post_images/mightymike_install1.png' style='float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 500px;' /&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Sheep Shaver by clicking &lt;a href='http://www.xs4all.nl/~ronaldpr/sheepshaverforum/SheepShaver_UB_20120715.zip'&gt;here&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Find a file named &lt;code&gt;SheepShaver_UB_20120715.zip&lt;/code&gt; in your downloads folder. Unzip the file by double-clicking on it. If the file was automatically unzipped, you might just see a folder named &lt;code&gt;SheepShaver_UB_20120715&lt;/code&gt;, in which case you can skip the unzipping step.&lt;/li&gt;
+
+&lt;li&gt;Rename this folder &lt;code&gt;SheepShaver&lt;/code&gt; and move it to someplace a little more permanent. I put mine in my &lt;code&gt;Applications&lt;/code&gt; folder. To the right is a screenshot of my finder window after this step.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id='loading_the_rom_and_the_os'&gt;Loading the ROM and the OS&lt;/h3&gt;
+
+&lt;p&gt;Next, you need Macintosh computer ROM. For a number of reasons, this is difficult to find. Lucky for us, the internet is full of people who like vintage computer binaries. Ha.&lt;/p&gt;
+
+&lt;h4 id='the_steps'&gt;The Steps:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download a ROM file &lt;a href='http://www.redundantrobot.com/macemulator/newworld86.rom.zip'&gt;here&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Find the file in your downloads folder and unzip it if necessary. Rename the file from &lt;code&gt;newworld86.rom&lt;/code&gt; to &lt;code&gt;ROM&lt;/code&gt;, without the file extension. This can be easier said than done. If you experience any difficulties making sure the file has no extension, select the file (single-click to highlight) and then select &lt;code&gt;File &amp;gt; Get Info&lt;/code&gt;. In the window that pops up, find where it says &amp;#8220;Name &amp;amp; Extension&amp;#8221; and in the box below, change the text to &lt;code&gt;ROM&lt;/code&gt;. Then, close the info window. Now, drag the file that you just named &lt;code&gt;ROM&lt;/code&gt; into your &lt;code&gt;SheepShaver&lt;/code&gt; folder in applications.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id='create_a_shared_folder'&gt;Create a shared folder&lt;/h3&gt;
+
+&lt;p&gt;While you have your &lt;code&gt;SheepShaver&lt;/code&gt; folder open, make a new folder inside it called &lt;code&gt;Shared&lt;/code&gt;. This will come in handy later.&lt;/p&gt;
+
+&lt;h3 id='download_mac_os_9'&gt;Download Mac OS 9&lt;/h3&gt;
+&lt;img alt='SheepShaver Folder in Finder' src='/assets/images/post_images/mightymike_install2.png' style='float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 200px;' /&gt;
+&lt;p&gt;Now we need to download and install an image of the old OS 9 operating system.&lt;/p&gt;
+
+&lt;h4 id='the_steps'&gt;The Steps:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the OS &lt;a href='http://www.redundantrobot.com/macemulator/OS9.img'&gt;here&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Move your new &lt;code&gt;OS9.img&lt;/code&gt; file into your SheepShaver folder. The contents of your SheepShaver folder should now look like the image on the right.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id='configuring_the_emulator'&gt;Configuring the Emulator&lt;/h3&gt;
+
+&lt;p&gt;Now we need to set up the emulator and all of the preferences. This is how we tell the emulator what ROM to use, how much memory to use, etc. This is the last step in the OS setup process.&lt;/p&gt;
+
+&lt;h4 id='the_steps'&gt;The Steps&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Go ahead and double-click on &lt;code&gt;SheepShaver&lt;/code&gt; with sheep icon in your SheepShaver folder to start up the emulator. You should see a grey window with a folder and a question mark.&lt;/li&gt;
+
+&lt;li&gt;Open up preferences just like you would in any other app by clicking on &lt;code&gt;SheepShaver &amp;gt; Preferences&lt;/code&gt;.&lt;/li&gt;
+
+&lt;li&gt;Make sure the &amp;#8220;Setup&amp;#8221; tab is selected.&lt;/li&gt;
+
+&lt;li&gt;Add the ROM file by clicking &amp;#8220;Browse&amp;#8221; and finding and opening the file that we renamed &lt;code&gt;ROM&lt;/code&gt;. It should be contained within your SheepShaver folder.&lt;/li&gt;
+
+&lt;li&gt;Now click &amp;#8220;Create&amp;#8221; under the empty list of volumes.&lt;/li&gt;
+
+&lt;li&gt;Save your new volume in the &lt;code&gt;SheepShaver&lt;/code&gt; folder. Name the file &lt;code&gt;MacOS9&lt;/code&gt; and change &amp;#8220;Volume Size&amp;#8221;. &lt;img alt='Volume Create Window' src='/assets/images/post_images/mightymike_install3.png' style='float: none; box-shadow: none; margin: 0px auto; width: 600px;' /&gt; &lt;br /&gt;&lt;/li&gt;
+
+&lt;li&gt;Now add the &lt;code&gt;OS9.img&lt;/code&gt; file to the list of volumes. Click &amp;#8220;Add&amp;#8221; under the list and open up your &lt;code&gt;OS9.img&lt;/code&gt; file.&lt;/li&gt;
+
+&lt;li&gt;Now change the value for Unix Root. Hit Browse and find the Shared folder that you created earlier inside your &lt;code&gt;SheepShaver&lt;/code&gt; folder. Then hit &amp;#8220;open&amp;#8221;.&lt;/li&gt;
+
+&lt;li&gt;Change the value of RAM size to 256 or 512 (256 will work just fine).&lt;/li&gt;
+
+&lt;li&gt;When you&amp;#8217;re done, your screen should look like the one below: &lt;img alt='Volume Create Window' src='/assets/images/post_images/mightymike_install4.png' style='float: none; box-shadow: none; margin: 0px auto; width: 600px;' /&gt; &lt;br /&gt; Your filepath for Unix Root might look a little different than the one in my picture. That&amp;#8217;s ok.&lt;/li&gt;
+
+&lt;li&gt;Now select the Audio / Video settings. Leave the audio part alone, and make the appropriate video settings to match those in the image below: &lt;br /&gt;&lt;img alt='Volume Create Window' src='/assets/images/post_images/mightymike_install5.png' style='float: none; box-shadow: none; margin: 0px auto; width: 600px;' /&gt; &lt;br /&gt;&lt;/li&gt;
+
+&lt;li&gt;Now select the Miscellaneous tab. Check the appropriate boxes as reflected in the image below:&lt;br /&gt;&lt;img alt='Volume Create Window' src='/assets/images/post_images/mightymike_install6.png' style='float: none; box-shadow: none; margin: 0px auto; width: 600px;' /&gt; &lt;br /&gt;&lt;/li&gt;
+
+&lt;li&gt;Quit SheepShaver by pressing &lt;code&gt;Control-Escape&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id='install_power_pete'&gt;Install Power Pete&lt;/h3&gt;
+
+&lt;p&gt;Now we can install Power Pete, AKA Mighty Mike. I found that the 2001 release of Mighty Mike was more readily available online, so that&amp;#8217;s the one I used. The only difference between Mighty Mike and Power Pete is the character&amp;#8217;s name and a couple of graphics settings - they&amp;#8217;re both the same classic game.&lt;/p&gt;
+
+&lt;h4 id='the_steps'&gt;The Steps:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the trial &lt;a href='http://www.pangeasoft.net/mightymike/files/Mighty%20Mike.zip'&gt;here&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Unzip the downloaded file if necessary.&lt;/li&gt;
+
+&lt;li&gt;Drag the &lt;code&gt;Mighty Mike&lt;/code&gt; folder into the &lt;code&gt;Shared&lt;/code&gt; folder located inside your &lt;code&gt;SheepShaver&lt;/code&gt; folder.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id='play_power_pete'&gt;Play Power Pete!&lt;/h3&gt;
+&lt;img alt='SheepShaver Folder in Finder' src='/assets/images/post_images/mightymike_install7.png' style='float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 300px;' /&gt;
+&lt;p&gt;Get ready to slay some fairy tale creatures and rescue rabbits! Fire up SheepShaver. It should boot up OS 9 and take you to a view of your desktop. Double click on the desktop icon that says &amp;#8220;Unix&amp;#8221; and inside, open up the Mighty Mike folder. Inside the folder, scroll all of the way down and find the icon that says &amp;#8220;Mighty Mike&amp;#8221;. Double click that icon. Play Away! (Note that you&amp;#8217;ll need a registration code. I think I am obligated to say that you can purchase one, if you would like. Contact me for more information).&lt;/p&gt;
+
+&lt;p&gt;A few notes to help you navigate Mighty Mike:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use the right and left arrow keys to move Mike around the screen.&lt;/li&gt;
+
+&lt;li&gt;Change weapons with the command key.&lt;/li&gt;
+
+&lt;li&gt;Go back or exit with the escape key.&lt;/li&gt;
+
+&lt;li&gt;Use the enter key to navigate menus.&lt;/li&gt;
+
+&lt;li&gt;You can always quit out of the emulator by using &lt;code&gt;control-escape&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If the sound doesn&amp;#8217;t seem to work at first, un-mute it in the menu &amp;#8216;Apple &amp;gt; Control Panels &amp;gt; Sound&amp;#8217;.&lt;/p&gt;
+
+&lt;p&gt;Good Luck!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Middlebury Menus</title>
