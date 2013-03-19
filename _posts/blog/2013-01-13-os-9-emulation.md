@@ -90,7 +90,7 @@ Now we can install Power Pete, AKA Mighty Mike. I found that the 2001 release of
 
 <img src="/assets/images/post_images/mightymike_install7.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 300px;" alt="SheepShaver Folder in Finder"/>
 
-Get ready to slay some fairy tale creatures and rescue rabbits! Fire up SheepShaver. It should boot up OS 9 and take you to a view of your desktop. Double click on the desktop icon that says "Unix" and inside, open up the Mighty Mike folder. Inside the folder, scroll all of the way down and find the icon that says "Mighty Mike". Double click that icon. Play Away! (Note that you'll need a registration code. I think I am obligated to say that you can purchase one, if you would like. Contact me for more information).
+Get ready to slay some fairy tale creatures and rescue rabbits! Fire up SheepShaver. It should boot up OS 9 and take you to a view of your desktop. Double click on the desktop icon that says "Unix" and inside, open up the Mighty Mike folder. Inside the folder, scroll all of the way down and find the icon that says "Mighty Mike". Double click that icon. Play Away! (Note that you'll need a registration code).
 
 A few notes to help you navigate Mighty Mike:
 1. Use the right and left arrow keys to move Mike around the screen.

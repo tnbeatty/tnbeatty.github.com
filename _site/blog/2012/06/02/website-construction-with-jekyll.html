@@ -63,9 +63,18 @@ Post content goes here.
 <p>I get my hands dirty with CSS from time to time, but I am by no means a <a href='http://willpots.com'>CSS guru</a>. Most of my time these days is spent programming in Objective-C for iOS. I was pleased to stumble upon the &#8220;transition&#8221; tag. Replacing jQuery or JavaScript with CSS only makes things faster and more convenient.</p>
 
 <p>This is easy enough to look up, but I will provide an example here. I like hover-over links to be a little more subtle rather than having harsh and rapid color changes. The transition makes :hover much smoother and I think it goes well with the soft feel of a site with lots of textures and shadows. Thus, I decided to make all of the blue links in the body of my site use a css transition on hover to change color. <a href='http://caniuse.com/#search=transition'>Cross-browser support</a> is pretty good, too. Here&#8217;s how it&#8217;s done:</p>
+<div class='highlight'><pre><code class='css'><span class='nt'>a</span> <span class='p'>{</span>
+	<span class='k'>color</span><span class='o'>:</span> <span class='m'>#08c</span><span class='p'>;</span>
+	<span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+	<span class='o'>-</span><span class='n'>moz</span><span class='o'>-</span><span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+	<span class='o'>-</span><span class='n'>webkit</span><span class='o'>-</span><span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+	<span class='o'>-</span><span class='n'>o</span><span class='o'>-</span><span class='n'>transition</span><span class='o'>:</span> <span class='k'>color</span> <span class='m'>0.2s</span><span class='p'>;</span>
+<span class='p'>}</span>
 
-<p>Liquid error: No such file or directory - posix_spawnp</p>
-
+<span class='nt'>a</span><span class='nd'>:hover</span> <span class='p'>{</span>
+	<span class='k'>color</span><span class='o'>:</span> <span class='m'>#006396</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
 <p>Just specify whatever tag you would like to change and the time over which the browser should linearly animate that change. Piece of cake.</p>
 
 <h3 id='sass_and_css'>SASS and CSS</h3>
@@ -75,9 +84,33 @@ Post content goes here.
 <p>To allow the use of SASS .scss files in place of css, I created a new <em>plugins directory in the root directory of my Jekyll site. Then I made a new file with filename sass</em>converter.rb. That&#8217;s it. Now when I run &#8220;$ jekyll &#8211;server&#8221; in my terminal (generate my site), it automatically generates CSS for me. Nice.</p>
 
 <pre><code>sass_converter.rb</code></pre>
+<div class='highlight'><pre><code class='ruby'><span class='k'>module</span> <span class='nn'>Jekyll</span>
+  <span class='nb'>require</span> <span class='s1'>&#39;sass&#39;</span>
+  <span class='k'>class</span> <span class='nc'>SassConverter</span> <span class='o'>&lt;</span> <span class='no'>Converter</span>
+    <span class='n'>safe</span> <span class='kp'>true</span>
+    <span class='n'>priority</span> <span class='ss'>:low</span>
 
-<p>Liquid error: No such file or directory - posix_spawnp</p>
+    <span class='k'>def</span> <span class='nf'>matches</span><span class='p'>(</span><span class='n'>ext</span><span class='p'>)</span>
+      <span class='n'>ext</span> <span class='o'>=~</span> <span class='sr'>/scss/i</span>
+    <span class='k'>end</span>
 
+    <span class='k'>def</span> <span class='nf'>output_ext</span><span class='p'>(</span><span class='n'>ext</span><span class='p'>)</span>
+      <span class='s2'>&quot;.css&quot;</span>
+    <span class='k'>end</span>
+
+    <span class='k'>def</span> <span class='nf'>convert</span><span class='p'>(</span><span class='n'>content</span><span class='p'>)</span>
+      <span class='k'>begin</span>
+        <span class='nb'>puts</span> <span class='s2'>&quot;Performing Sass Conversion.&quot;</span>
+        <span class='n'>engine</span> <span class='o'>=</span> <span class='ss'>Sass</span><span class='p'>:</span><span class='ss'>:Engine</span><span class='o'>.</span><span class='n'>new</span><span class='p'>(</span><span class='n'>content</span><span class='p'>,</span> <span class='ss'>:syntax</span> <span class='o'>=&gt;</span> <span class='ss'>:scss</span><span class='p'>,</span> <span class='ss'>:load_paths</span> <span class='o'>=&gt;</span> <span class='o'>[</span><span class='s2'>&quot;./css/&quot;</span><span class='o'>]</span><span class='p'>)</span>
+        <span class='n'>engine</span><span class='o'>.</span><span class='n'>render</span>
+      <span class='k'>rescue</span> <span class='no'>StandardError</span> <span class='o'>=&gt;</span> <span class='n'>e</span>
+        <span class='nb'>puts</span> <span class='s2'>&quot;*** SASS Error: &quot;</span> <span class='o'>+</span> <span class='n'>e</span><span class='o'>.</span><span class='n'>message</span>
+      <span class='k'>end</span>
+    <span class='k'>end</span>
+
+  <span class='k'>end</span>
+<span class='k'>end</span>
+</code></pre></div>
 <p>Of course, after doing this, you can still use standard CSS within a .scss file as SASS is a strict superset of CSS. Also, .css files will not be touched by the sass converter.</p>
 
 <h3 id='sass_highlighting_in_sublimetext'>SASS Highlighting in SublimeText</h3>

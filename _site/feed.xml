@@ -6,8 +6,8 @@
     <atom:link href="http://tnbeatty.github.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>I'm not lazy - my code's just compiling.</description>
     <language>en-us</language>
-    <pubDate>Sun, 13 Jan 2013 16:10:43 -0500</pubDate>
-    <lastBuildDate>Sun, 13 Jan 2013 16:10:43 -0500</lastBuildDate>
+    <pubDate>Tue, 19 Mar 2013 11:31:29 -0400</pubDate>
+    <lastBuildDate>Tue, 19 Mar 2013 11:31:29 -0400</lastBuildDate>
 
     
     <item>
@@ -124,7 +124,7 @@
 
 &lt;h3 id='play_power_pete'&gt;Play Power Pete!&lt;/h3&gt;
 &lt;img alt='SheepShaver Folder in Finder' src='/assets/images/post_images/mightymike_install7.png' style='float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 300px;' /&gt;
-&lt;p&gt;Get ready to slay some fairy tale creatures and rescue rabbits! Fire up SheepShaver. It should boot up OS 9 and take you to a view of your desktop. Double click on the desktop icon that says &amp;#8220;Unix&amp;#8221; and inside, open up the Mighty Mike folder. Inside the folder, scroll all of the way down and find the icon that says &amp;#8220;Mighty Mike&amp;#8221;. Double click that icon. Play Away! (Note that you&amp;#8217;ll need a registration code. I think I am obligated to say that you can purchase one, if you would like. Contact me for more information).&lt;/p&gt;
+&lt;p&gt;Get ready to slay some fairy tale creatures and rescue rabbits! Fire up SheepShaver. It should boot up OS 9 and take you to a view of your desktop. Double click on the desktop icon that says &amp;#8220;Unix&amp;#8221; and inside, open up the Mighty Mike folder. Inside the folder, scroll all of the way down and find the icon that says &amp;#8220;Mighty Mike&amp;#8221;. Double click that icon. Play Away! (Note that you&amp;#8217;ll need a registration code).&lt;/p&gt;
 
 &lt;p&gt;A few notes to help you navigate Mighty Mike:&lt;/p&gt;
 
@@ -251,11 +251,13 @@ Post content goes here.
 
 &lt;pre&gt;&lt;code&gt;myObject.h&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;@property&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;readwrite&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='n'&gt;NSString&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;userName&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;myObject.m&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
+&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;@synthesize&lt;/span&gt; &lt;span class='n'&gt;userName&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;_userName&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, the part in myObject.m is generated for me&amp;#8230; How convenient!&lt;/p&gt;
 
@@ -266,17 +268,33 @@ Post content goes here.
 &lt;h2 id='object_literals'&gt;Object Literals&lt;/h2&gt;
 
 &lt;p&gt;This is my favorite change to Objective-C. Having had some experience with Java, Python, Ruby, and other languages that have cleaner syntax, I have been driven crazy about all of the text involved with making objects in my code. First off, now you can make NSNumbers just like you can make an NSString, designated by the @ symbol. For example:&lt;/p&gt;
-
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
-
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;	&lt;span class='n'&gt;NSNumber&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;value&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mi'&gt;12345&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mi'&gt;12345&lt;/span&gt;&lt;span class='n'&gt;ul&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mi'&gt;12345l&lt;/span&gt;&lt;span class='n'&gt;l&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mf'&gt;123.45f&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='mf'&gt;123.45&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='n'&gt;YES&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;value&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='p'&gt;([&lt;/span&gt;&lt;span class='n'&gt;myClass&lt;/span&gt; &lt;span class='n'&gt;expressionReturningANumber&lt;/span&gt;&lt;span class='p'&gt;]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Dictionaries and arrays take a tremendous amount of text. To create a dictionary, I have had to write something like this:&lt;/p&gt;
-
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
-
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='n'&gt;NSDictionary&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;keyValuePairs&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; 
+	&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;NSDictionary&lt;/span&gt; &lt;span class='nl'&gt;dictionaryWithObjects:&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;NSArray&lt;/span&gt; &lt;span class='nl'&gt;arrayWithObjects:&lt;/span&gt;
+			&lt;span class='n'&gt;email&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+			&lt;span class='n'&gt;password&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+			&lt;span class='n'&gt;hash&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+			&lt;span class='nb'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; 
+        &lt;span class='nl'&gt;forKeys:&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;NSArray&lt;/span&gt; &lt;span class='nl'&gt;arrayWithObjects:&lt;/span&gt;
+        	&lt;span class='s'&gt;@&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+        	&lt;span class='s'&gt;@&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+        	&lt;span class='s'&gt;@&amp;quot;token&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; 
+    		&lt;span class='nb'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;
+    &lt;span class='p'&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That is obviously unreadable. In the same manner as an NSString and an NSNumber, arrays and numbers are replaced with the @-notation @&lt;span /&gt; and @{}. Thus, the above code can be replaced with the following:&lt;/p&gt;
-
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
-
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='n'&gt;NSDictionary&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;keyValuePairs&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; 
+	&lt;span class='err'&gt;@&lt;/span&gt;&lt;span class='p'&gt;{&lt;/span&gt; &lt;span class='s'&gt;@&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;email&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;@&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;password&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;@&amp;quot;token&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='n'&gt;token&lt;/span&gt; &lt;span class='p'&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Piece of cake. Apple wins again.&lt;/p&gt;</description>
     </item>
     
@@ -350,9 +368,13 @@ Post content goes here.
 &lt;h3 id='standard_orientation_handling'&gt;Standard Orientation Handling&lt;/h3&gt;
 
 &lt;p&gt;It is pretty standard to return YES for any supported orientations when the &lt;a href='http://developer.apple.com/library/ios/#documentation/uikit/reference/UIViewController_Class/Reference/Reference.html'&gt;shouldAutorotateToInterfaceOrientation:&lt;/a&gt; method is called in a view controller as below:&lt;/p&gt;
-
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
-
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;-&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kt'&gt;BOOL&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nf'&gt;shouldAutorotateToInterfaceOrientation:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;UIInterfaceOrientation&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nv'&gt;interfaceOrientation&lt;/span&gt;
+&lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;interfaceOrientation&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='n'&gt;UIInterfaceOrientationPortrait&lt;/span&gt; &lt;span class='o'&gt;||&lt;/span&gt;
+            &lt;span class='n'&gt;interfaceOrientation&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='n'&gt;UIInterfaceOrientationLandscapeRight&lt;/span&gt;&lt;span class='o'&gt;||&lt;/span&gt;
+            &lt;span class='n'&gt;interfaceOrientation&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='n'&gt;UIInterfaceOrientationLandscapeLeft&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Apple documents this technique well in their orientation changes &lt;a href='http://developer.apple.com/library/ios/#featuredarticles/ViewControllerPGforiPhoneOS/RespondingtoDeviceOrientationChanges/RespondingtoDeviceOrientationChanges.html#//apple_ref/doc/uid/TP40007457-CH7-SW1'&gt;guide&lt;/a&gt;. After returning a true response in the above method, &lt;a href='http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instm/UIViewController/willRotateToInterfaceOrientation:duration:'&gt;willRotateToInterfaceOrientation:Duration:&lt;/a&gt; gets called. Within this method, you can handle any necessary animations.&lt;/p&gt;
 
 &lt;h3 id='rotating_onscreen_ui_elements'&gt;Rotating On-Screen UI Elements&lt;/h3&gt;
@@ -366,9 +388,12 @@ Post content goes here.
 &lt;h3 id='detecting_device_orientation_changes'&gt;Detecting Device Orientation Changes&lt;/h3&gt;
 
 &lt;p&gt;In the view controller&amp;#8217;s viewDidLoad method, begin listening for a notification:&lt;/p&gt;
-
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
-
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='p'&gt;[[&lt;/span&gt;&lt;span class='n'&gt;UIDevice&lt;/span&gt; &lt;span class='n'&gt;currentDevice&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='n'&gt;beginGeneratingDeviceOrientationNotifications&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+&lt;span class='p'&gt;[[&lt;/span&gt;&lt;span class='n'&gt;NSNotificationCenter&lt;/span&gt; &lt;span class='n'&gt;defaultCenter&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='nl'&gt;addObserver:&lt;/span&gt;&lt;span class='n'&gt;self&lt;/span&gt; 
+                                         &lt;span class='nl'&gt;selector:&lt;/span&gt;&lt;span class='k'&gt;@selector&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nl'&gt;deviceDidRotate:&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; 
+                                             &lt;span class='nl'&gt;name:&lt;/span&gt;&lt;span class='n'&gt;UIDeviceOrientationDidChangeNotification&lt;/span&gt; 
+                                           &lt;span class='nl'&gt;object:&lt;/span&gt;&lt;span class='nb'&gt;nil&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Where a method in the view controller is called every time the device orientation is changed. In my view controller, I included the following:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    -(void)deviceDidRotate:(NSNotification *)notification;&lt;/code&gt;&lt;/pre&gt;
@@ -384,9 +409,25 @@ Post content goes here.
 &lt;p&gt;Once we know that the device orientation has changed, we can handle the change by calling a helper method or animating any necessary UI elements. We just need to be careful because the device has face-down and face-up orientations.&lt;/p&gt;
 
 &lt;p&gt;I wrote a custom rotation method to handle animated rotations.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;-&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kt'&gt;void&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nf'&gt;rotateImage:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;UIImageView&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nv'&gt;image&lt;/span&gt; 
+           &lt;span class='nf'&gt;duration:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;NSTimeInterval&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nv'&gt;duration&lt;/span&gt;
+              &lt;span class='nf'&gt;curve:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kt'&gt;int&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nv'&gt;curve&lt;/span&gt; 
+            &lt;span class='nf'&gt;radians:&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;CGFloat&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;&lt;span class='nv'&gt;radians&lt;/span&gt;
+&lt;span class='p'&gt;{&lt;/span&gt;
+    &lt;span class='c1'&gt;// Setup the animation                                                                           &lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;beginAnimations:&lt;/span&gt;&lt;span class='nb'&gt;nil&lt;/span&gt; &lt;span class='nl'&gt;context:&lt;/span&gt;&lt;span class='nb'&gt;NULL&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;setAnimationDuration:&lt;/span&gt;&lt;span class='n'&gt;duration&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;setAnimationCurve:&lt;/span&gt;&lt;span class='n'&gt;curve&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='nl'&gt;setAnimationBeginsFromCurrentState:&lt;/span&gt;&lt;span class='n'&gt;YES&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
+    &lt;span class='c1'&gt;// The transform matrix                                                                          &lt;/span&gt;
+    &lt;span class='n'&gt;CGAffineTransform&lt;/span&gt; &lt;span class='n'&gt;transform&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;CGAffineTransformMakeRotation&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;radians&lt;/span&gt;&lt;span class='p'&gt;);&lt;/span&gt;
+    &lt;span class='n'&gt;image&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='n'&gt;transform&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;transform&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
 
+    &lt;span class='c1'&gt;// Commit the changes                                                                            &lt;/span&gt;
+    &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;UIView&lt;/span&gt; &lt;span class='n'&gt;commitAnimations&lt;/span&gt;&lt;span class='p'&gt;];&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This cleans up the code a bit by providing the animation to rotate any UIImageView.&lt;/p&gt;</description>
     </item>
     
@@ -413,9 +454,18 @@ Post content goes here.
 &lt;p&gt;I get my hands dirty with CSS from time to time, but I am by no means a &lt;a href='http://willpots.com'&gt;CSS guru&lt;/a&gt;. Most of my time these days is spent programming in Objective-C for iOS. I was pleased to stumble upon the &amp;#8220;transition&amp;#8221; tag. Replacing jQuery or JavaScript with CSS only makes things faster and more convenient.&lt;/p&gt;
 
 &lt;p&gt;This is easy enough to look up, but I will provide an example here. I like hover-over links to be a little more subtle rather than having harsh and rapid color changes. The transition makes :hover much smoother and I think it goes well with the soft feel of a site with lots of textures and shadows. Thus, I decided to make all of the blue links in the body of my site use a css transition on hover to change color. &lt;a href='http://caniuse.com/#search=transition'&gt;Cross-browser support&lt;/a&gt; is pretty good, too. Here&amp;#8217;s how it&amp;#8217;s done:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='nt'&gt;a&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='k'&gt;color&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;#08c&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='n'&gt;transition&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;color&lt;/span&gt; &lt;span class='m'&gt;0.2s&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;moz&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;transition&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;color&lt;/span&gt; &lt;span class='m'&gt;0.2s&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;webkit&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;transition&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;color&lt;/span&gt; &lt;span class='m'&gt;0.2s&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+	&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;o&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;transition&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='k'&gt;color&lt;/span&gt; &lt;span class='m'&gt;0.2s&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
-
+&lt;span class='nt'&gt;a&lt;/span&gt;&lt;span class='nd'&gt;:hover&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+	&lt;span class='k'&gt;color&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='m'&gt;#006396&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+&lt;span class='p'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Just specify whatever tag you would like to change and the time over which the browser should linearly animate that change. Piece of cake.&lt;/p&gt;
 
 &lt;h3 id='sass_and_css'&gt;SASS and CSS&lt;/h3&gt;
@@ -425,9 +475,33 @@ Post content goes here.
 &lt;p&gt;To allow the use of SASS .scss files in place of css, I created a new &lt;em&gt;plugins directory in the root directory of my Jekyll site. Then I made a new file with filename sass&lt;/em&gt;converter.rb. That&amp;#8217;s it. Now when I run &amp;#8220;$ jekyll &amp;#8211;server&amp;#8221; in my terminal (generate my site), it automatically generates CSS for me. Nice.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sass_converter.rb&lt;/code&gt;&lt;/pre&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;span class='k'&gt;module&lt;/span&gt; &lt;span class='nn'&gt;Jekyll&lt;/span&gt;
+  &lt;span class='nb'&gt;require&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;sass&amp;#39;&lt;/span&gt;
+  &lt;span class='k'&gt;class&lt;/span&gt; &lt;span class='nc'&gt;SassConverter&lt;/span&gt; &lt;span class='o'&gt;&amp;lt;&lt;/span&gt; &lt;span class='no'&gt;Converter&lt;/span&gt;
+    &lt;span class='n'&gt;safe&lt;/span&gt; &lt;span class='kp'&gt;true&lt;/span&gt;
+    &lt;span class='n'&gt;priority&lt;/span&gt; &lt;span class='ss'&gt;:low&lt;/span&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;
+    &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;matches&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;ext&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+      &lt;span class='n'&gt;ext&lt;/span&gt; &lt;span class='o'&gt;=~&lt;/span&gt; &lt;span class='sr'&gt;/scss/i&lt;/span&gt;
+    &lt;span class='k'&gt;end&lt;/span&gt;
 
+    &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;output_ext&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;ext&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+      &lt;span class='s2'&gt;&amp;quot;.css&amp;quot;&lt;/span&gt;
+    &lt;span class='k'&gt;end&lt;/span&gt;
+
+    &lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;convert&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;content&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+      &lt;span class='k'&gt;begin&lt;/span&gt;
+        &lt;span class='nb'&gt;puts&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;Performing Sass Conversion.&amp;quot;&lt;/span&gt;
+        &lt;span class='n'&gt;engine&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='ss'&gt;Sass&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt;&lt;span class='ss'&gt;:Engine&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;new&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;content&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='ss'&gt;:syntax&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='ss'&gt;:scss&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='ss'&gt;:load_paths&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='o'&gt;[&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;./css/&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+        &lt;span class='n'&gt;engine&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;render&lt;/span&gt;
+      &lt;span class='k'&gt;rescue&lt;/span&gt; &lt;span class='no'&gt;StandardError&lt;/span&gt; &lt;span class='o'&gt;=&amp;gt;&lt;/span&gt; &lt;span class='n'&gt;e&lt;/span&gt;
+        &lt;span class='nb'&gt;puts&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;*** SASS Error: &amp;quot;&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='n'&gt;e&lt;/span&gt;&lt;span class='o'&gt;.&lt;/span&gt;&lt;span class='n'&gt;message&lt;/span&gt;
+      &lt;span class='k'&gt;end&lt;/span&gt;
+    &lt;span class='k'&gt;end&lt;/span&gt;
+
+  &lt;span class='k'&gt;end&lt;/span&gt;
+&lt;span class='k'&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Of course, after doing this, you can still use standard CSS within a .scss file as SASS is a strict superset of CSS. Also, .css files will not be touched by the sass converter.&lt;/p&gt;
 
 &lt;h3 id='sass_highlighting_in_sublimetext'&gt;SASS Highlighting in SublimeText&lt;/h3&gt;
