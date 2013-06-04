@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>Nate Beatty | {{ page.title }}</title>
-   <meta name="author" content="Nate Beatty" />
-   <!--<link href="http://feeds.feedburner.com/natebeatty?" rel="alternate" title="Nate Beatty" type="application/atom+xml" />-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{{ page.title }}</title>
 
-   <!-- syntax highlighting CSS -->
-   <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" />
 
-   <!-- Homepage CSS -->
-   <link rel="stylesheet" href="/assets/css/screen.css" type="text/css" />
+	<link rel="stylesheet" href="stylesheets/app.css" />
 
-   <!-- Load jQuery from Google -->
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-   <!-- Load javascript and jQuery plugins -->
-   <script src="/assets/js/jquery.xdomainajax.js"></script>
-
-   <!-- Code for the ShareThis buttons on blog posts -->
-   <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-   <script type="text/javascript">stLight.options({publisher: "fe2f9ad0-d56a-475a-addf-fe5daac54530"}); </script>
+	<script src="javascripts/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
 
-	{% include header.html %}
+	{{ content }}
 
-	<div class="wrapper">
+	<!-- Include Javascripts -->
 
-		<div class="menu">{% include menu.html %}</div>
+	<script>
+	document.write('<script src=' +
+		('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+		'.js><\/script>')
+	</script>
 
-		{{ content }}
+	<script src="javascripts/foundation/foundation.js"></script>
+	
+	<script src="javascripts/foundation/foundation.alerts.js"></script>
+	<script src="javascripts/foundation/foundation.clearing.js"></script>
+	<script src="javascripts/foundation/foundation.cookie.js"></script>
+	<script src="javascripts/foundation/foundation.dropdown.js"></script>
+	<script src="javascripts/foundation/foundation.forms.js"></script>
+	<script src="javascripts/foundation/foundation.joyride.js"></script>
+	<script src="javascripts/foundation/foundation.magellan.js"></script>
+	<script src="javascripts/foundation/foundation.orbit.js"></script>
+	<script src="javascripts/foundation/foundation.placeholder.js"></script>
+	<script src="javascripts/foundation/foundation.reveal.js"></script>
+	<script src="javascripts/foundation/foundation.section.js"></script>
+	<script src="javascripts/foundation/foundation.tooltips.js"></script>
+	<script src="javascripts/foundation/foundation.topbar.js"></script>
+	
 
-      <div class="footer">Made by <a href="http://natebeatty.com">Nate</a></div>
-
-	</div>
-
-   <!-- Google analytics -->
-   <script type="text/javascript">
-
-     var _gaq = _gaq || [];
-     _gaq.push(['_setAccount', 'UA-36134872-1']);
-     _gaq.push(['_setDomainName', 'natebeatty.com']);
-     _gaq.push(['_trackPageview']);
-
-     (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-
-   </script>
+	<script>
+	$(document).foundation();
+	</script>
 </body>
+</html>
