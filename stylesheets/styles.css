@@ -1,0 +1,61 @@
+/*
+* styles.scss, styles.css
+*
+* Written by Nate Beatty 
+* June 2013
+*
+* This file contains any custom styling unaffiliated
+* with Zurb Foundation or other third party stylesheets.
+* CSS classes and ID's have `tnb` prefix to prevent conflicts.
+*/
+/* global */
+/* line 16, ../sass/styles.scss */
+#tnb_profile {
+  text-align: center;
+}
+/* line 18, ../sass/styles.scss */
+#tnb_profile #tnb_header {
+  height: 250px;
+  background: url(/assets/img/header.jpg) no-repeat center;
+}
+/* line 22, ../sass/styles.scss */
+#tnb_profile #tnb_pic {
+  margin: -75px auto 0px auto;
+  width: 150px;
+  height: 150px;
+  background-size: 150px 150px;
+  border: 4px white solid;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  background: url(/assets/img/profile.jpg) no-repeat;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* line 41, ../sass/styles.scss */
+#tnb_menu li {
+  display: inline-block;
+  float: none;
+}
+
+/* line 47, ../sass/styles.scss */
+footer {
+  padding-bottom: 10px;
+  color: #888888;
+}
+/* line 51, ../sass/styles.scss */
+footer #tnb_footer_left a {
+  color: #888888;
+  border-bottom: dashed 1px;
+}
+/* line 55, ../sass/styles.scss */
+footer #tnb_footer_left a:hover {
+  color: #7b7b7b;
+  border-bottom: dashed 1px;
+}
+/* line 61, ../sass/styles.scss */
+footer #tnb_footer_right li {
+  float: right;
+}

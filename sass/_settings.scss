@@ -1,4 +1,11 @@
 //
+// Custom Variables
+//
+
+// Variables set specifically for the custom styles defined in styles.scss
+$footer-text-color: #888;
+
+//
 // Foundation Variables
 //
 
@@ -41,10 +48,10 @@ $em-base: 16px !default;
 
 // Colors
 
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: #2B575B;
+$secondary-color: #956C47;
+$alert-color: #954B47;
+$success-color: #37743E;
 
 // Make sure border radius matches unless we want it different.
 
@@ -100,7 +107,7 @@ $em-base: 16px !default;
 // Grid Variables
 //
 
-// $row-width: emCalc(1000px);
+$row-width: emCalc(1200px);
 // $column-gutter: emCalc(30px);
 // $total-columns: 12;
 
