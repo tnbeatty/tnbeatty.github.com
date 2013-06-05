@@ -23,39 +23,43 @@
   margin: -75px auto 0px auto;
   width: 150px;
   height: 150px;
-  background-size: 150px 150px;
   border: 4px white solid;
   border-radius: 75px;
   -webkit-border-radius: 75px;
   -moz-border-radius: 75px;
   background: url(/assets/img/profile.jpg) no-repeat;
+  background-size: 150px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 /* line 41, ../sass/styles.scss */
+#tnb_menu i {
+  font-size: 1.25em;
+}
+/* line 44, ../sass/styles.scss */
 #tnb_menu li {
   display: inline-block;
   float: none;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 footer {
   padding-bottom: 10px;
   color: #888888;
 }
-/* line 51, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 footer #tnb_footer_left a {
   color: #888888;
   border-bottom: dashed 1px;
 }
-/* line 55, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 footer #tnb_footer_left a:hover {
   color: #7b7b7b;
   border-bottom: dashed 1px;
 }
-/* line 61, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 footer #tnb_footer_right li {
   float: right;
 }

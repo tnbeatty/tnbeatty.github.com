@@ -24,12 +24,12 @@
 		margin: -($tnb_pic_width / 2) auto 0px auto;
 		width: $tnb_pic_width;
 		height: $tnb_pic_width;
-		background-size: $tnb_pic_width $tnb_pic_width;
 		border: 4px white solid;
 		border-radius: $tnb_pic_width / 2;
 		-webkit-border-radius: $tnb_pic_width / 2;
 		-moz-border-radius: $tnb_pic_width / 2;
 		background: url(/assets/img/profile.jpg) no-repeat;
+		background-size: $tnb_pic_width;
 		$tnb_pic_shadow_size: 5px;
 		box-shadow: 0 0 $tnb_pic_shadow_size rgba(0, 0, 0, .8);
 		-webkit-box-shadow: 0 0 $tnb_pic_shadow_size rgba(0, 0, 0, .8);
@@ -38,6 +38,9 @@
 }
 
 #tnb_menu {
+	i {
+		font-size: emCalc(20px);
+	}
 	li {
 		display: inline-block;
 		float: none;
