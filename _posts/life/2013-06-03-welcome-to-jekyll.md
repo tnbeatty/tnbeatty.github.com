@@ -2,10 +2,10 @@
 layout: post
 title: "Welcome to Jekyll"
 date:   2013-06-03 21:31:29
-categories: jekyll update
+categories: life
 ---
 
-Bacon ipsum dolor sit amet andouille ball tip turkey shoulder capicola tongue bacon kielbasa tenderloin t-bone sausage frankfurter. Biltong ground round beef ribs tongue tri-tip t-bone jerky jowl shank kielbasa pork belly pancetta sausage venison. Meatloaf t-bone cow bresaola prosciutto hamburger beef ribs frankfurter short loin tail ham pancetta. Ribeye bacon swine, corned beef pig ground round tenderloin pancetta. Frankfurter corned beef chicken turducken pork pig. Meatloaf pork ball tip, biltong drumstick sausage t-bone turducken shankle prosciutto.
+Bacon ipsum dolor sit amet andouille ball tip turkey shoulder capicola tongue bacon kielbasa tenderloin t-bone sausage frankfurter. <!-- more -->Biltong ground round beef ribs tongue tri-tip t-bone jerky jowl shank kielbasa pork belly pancetta sausage venison. Meatloaf t-bone cow bresaola prosciutto hamburger beef ribs frankfurter short loin tail ham pancetta. Ribeye bacon swine, corned beef pig ground round tenderloin pancetta. Frankfurter corned beef chicken turducken pork pig. Meatloaf pork ball tip, biltong drumstick sausage t-bone turducken shankle prosciutto.
 
 Beef ribs ham hock beef swine pig short ribs cow rump filet mignon turkey bacon ribeye pork belly doner sausage. Doner pork chop meatloaf, pastrami turkey venison jerky prosciutto rump beef shoulder pig chicken fatback swine. Brisket cow andouille, flank t-bone pork turkey pig beef ribs filet mignon. Pastrami beef ribs spare ribs turkey rump ham hock leberkas ribeye ball tip beef. Shankle tongue kielbasa doner beef ribs. Strip steak pig leberkas drumstick. Tri-tip strip steak andouille jerky, meatball t-bone short loin tail pork belly ribeye bresaola corned beef.
 

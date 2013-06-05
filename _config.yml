@@ -6,3 +6,5 @@ pygments: true
 
 # Only allow plugins that github will read
 safe: true
+
+excerpt_separator: "<!-- more -->"
