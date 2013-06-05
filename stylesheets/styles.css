@@ -63,3 +63,14 @@ footer #tnb_footer_left a:hover {
 footer #tnb_footer_right li {
   float: right;
 }
+
+/* index */
+/* line 72, ../sass/styles.scss */
+#container {
+  margin: 20px auto;
+}
+/* line 74, ../sass/styles.scss */
+#container .postlist-item {
+  width: 240px;
+  padding: 0px 20px;
+}

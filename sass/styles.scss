@@ -62,8 +62,17 @@ footer {
 	}
 	#tnb_footer_right {
 		li {
-//			display: inline-block;
 			float: right;
 		}
+	}
+}
+
+/* index */
+
+#container {
+	margin: 20px auto;
+	.postlist-item {
+		width: $postlist-item-width;
+		padding: 0px 20px;
 	}
 }
