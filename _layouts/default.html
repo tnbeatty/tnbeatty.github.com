@@ -30,7 +30,18 @@
 			</ul>
 			<p>Bacon kielbasa doner andouille. Sausage fatback pork loin cow ground round frankfurter ball tip tongue drumstick corned beef swine bacon venison. Spare ribs turkey doner sirloin.</p>
 
-			<div id="tnb_menu"></div>
+			<div id="tnb_menu">
+				{% if page.url == '/index.html' %}
+				<ul class="inline-list" id="tnb_menulist">
+					<li><a href="#" data-filter="*">show all</a></li>
+					<li><a href="#" data-filter=".postlist-category-physics">physics</a></li>
+					<li><a href="#" data-filter=".postlist-category-code">code</a></li>
+					<li><a href="#" data-filter=".postlist-category-life">life</a></li>
+				</ul>
+				{% else %}
+				<a href="/">&larr; View All Posts</a>
+				{% endif %}
+			</div>
 
 		</div>
 
