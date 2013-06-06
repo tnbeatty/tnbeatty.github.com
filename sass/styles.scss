@@ -20,6 +20,10 @@
 //	font-family: "CodePro", Arial, sans-serif;
 //}
 
+#content {
+	margin-top: 15px;
+}
+
 #tnb_profile {
 	text-align: center;
 	#tnb_header {
@@ -45,6 +49,10 @@
 }
 
 #tnb_menu {
+	text-align: center;
+}
+
+#tnb_menulist {
 	i {
 		font-size: emCalc(20px);
 	}
