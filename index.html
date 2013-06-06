@@ -4,7 +4,7 @@ title: home
 ---
 
 <div id="container">
-	{% for post in site.posts %}
+	{% for post in site.posts limit: 20 %}
 	<div class="postlist-item postlist-category-{{ post.category }}">
 		<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
 		<span>
