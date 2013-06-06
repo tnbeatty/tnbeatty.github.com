@@ -22,8 +22,8 @@ $.Isotope.prototype._getCenteredMasonryColumns = function() {
 		// if there's no items, use size of container
 		parentWidth;
 
-	var cols = Math.floor( parentWidth / colW );
-	cols = Math.max( cols, 1 );
+		var cols = Math.floor( parentWidth / colW );
+		cols = Math.max( cols, 1 );
 	// i.e. this.masonry.cols = ....
 	this.masonry.cols = cols;
 	// i.e. this.masonry.columnWidth = ...
@@ -73,6 +73,12 @@ $(function(){
 		masonry : {
 			columnWidth : postlistItemWidth
 		},
+		animationEngine: 'jquery',
+		animationOptions: {
+			duration: 250,
+			easing: 'linear',
+			queue: false
+		},
 		getSortData : {
 			date : function ( $elem ) {
 				var array = $elem.find('.date').text().split('-');
@@ -84,7 +90,13 @@ $(function(){
 		sortBy : 'date',
 		sortAscending : false
 	});
+	$('#tnb_menu a').click(function(){
+		var selector = $(this).attr('data-filter');
+		$container.isotope({ filter: selector });
+		return false;
+	});
 });
+
 
 // Replace headers with appropriate symbols
 //$(".code.symbol").html("&Gamma;");
