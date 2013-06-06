@@ -10,8 +10,15 @@
 */
 
 @import "settings";
+@import "fonts";
 
 /* global */
+
+//@include codePro("normal");
+
+//h1, h2, h3, h4, h5, h6 {
+//	font-family: "CodePro", Arial, sans-serif;
+//}
 
 #tnb_profile {
 	text-align: center;
@@ -50,17 +57,19 @@
 footer {
 	padding-bottom: 10px;
 	color: $footer-text-color;
+	a {
+		color: $footer-text-color;
+		border-bottom: dashed 1px;
+	}
+	a:hover {
+		color: darken($footer-text-color, 5%);
+		border-bottom: dashed 1px;
+	}
 	#tnb_footer_left {
-		a {
-			color: $footer-text-color;
-			border-bottom: dashed 1px;
-		}
-		a:hover {
-			color: darken($footer-text-color, 5%);
-			border-bottom: dashed 1px;
-		}
+
 	}
 	#tnb_footer_right {
+		text-align: right;
 		li {
 			float: right;
 		}
@@ -81,7 +90,7 @@ footer {
 	}
 	.postlist-item {
 		h3, h4 {
-			font-variant: small-caps;
+			//font-variant: small-caps;
 		}
 		width: $postlist-item-width;
 		padding: 0px 20px;
@@ -91,6 +100,7 @@ footer {
 		}
 		.symbol {
 			font-family: serif;
+			font-weight: 600;
 		}
 	}
 	.postlist-category-code {

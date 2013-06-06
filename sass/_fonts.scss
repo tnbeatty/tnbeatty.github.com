@@ -1,0 +1,15 @@
+$tnb_fontFiles: "../assets/fonts/cp";
+$tnb_fontName: "CodePro";
+
+@mixin codePro($weight) {
+	@font-face {
+		font-family: $tnb_fontName;
+		src: url('#{$tnb_fontFiles}-#{$weight}.eot');
+		src: url('#{$tnb_fontFiles}-#{$weight}.eot?#iefix') format('embedded-opentype'),
+			 url('#{$tnb_fontFiles}-#{$weight}.woff') format('woff'),
+			 url('#{$tnb_fontFiles}-#{$weight}.ttf') format('truetype'),
+			 url('#{$tnb_fontFiles}-#{$weight}.svg##{tnb_fontName}') format('svg');
+		font-weight: $weight;
+		font-style: normal;
+	}
+}

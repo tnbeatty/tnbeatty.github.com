@@ -8,7 +8,7 @@ title: home
 	<div class="postlist-item postlist-category-{{ post.category }}">
 		<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
 		<span>
-			<h5 class="subheader {{ post.category }} symbol left"></h5>
+			<h5 class="{{ post.category }} symbol left"></h5>
 			<h6 class="subheader date right">{{ post.date | date: "%m-%d-%y"}}</h6>
 		</span>
 		<hr>

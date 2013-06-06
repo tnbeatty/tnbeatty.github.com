@@ -87,6 +87,6 @@ $(function(){
 });
 
 // Replace headers with appropriate symbols
-$(".code.symbol").html("&Gamma;");
-$(".life.symbol").html("&Tau;");
+//$(".code.symbol").html("&Gamma;");
+//$(".life.symbol").html("&Tau;");
 $(".physics.symbol").html("&Psi;");
