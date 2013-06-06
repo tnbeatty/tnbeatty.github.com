@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "I Love Markdown"
-date:   2013-06-03 21:31:29
-categories: code
+date:   2013-06-05 21:31:29
+category: code
 ---
 
 Jerky prosciutto hamburger shank, leberkas bacon beef ribs ham hock venison kielbasa boudin pork chop pig. Sirloin frankfurter flank corned beef beef shank pork chop fatback andouille tenderloin sausage pork. <!-- more -->Bresaola shankle ham ribeye venison tongue sirloin pancetta shoulder pork. Shoulder bacon andouille, biltong sirloin frankfurter strip steak pig turducken pork loin chicken. Boudin t-bone tri-tip kielbasa pork chop andouille beef spare ribs turkey shank shankle bresaola. Frankfurter salami ham andouille bresaola.

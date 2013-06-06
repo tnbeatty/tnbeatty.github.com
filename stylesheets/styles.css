@@ -69,8 +69,53 @@ footer #tnb_footer_right li {
 #container {
   margin: 20px auto;
 }
-/* line 74, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
+#container span .left {
+  float: left;
+}
+/* line 78, ../sass/styles.scss */
+#container span .right {
+  float: right;
+}
+/* line 82, ../sass/styles.scss */
 #container .postlist-item {
-  width: 240px;
+  width: 250px;
   padding: 0px 20px;
+}
+/* line 83, ../sass/styles.scss */
+#container .postlist-item h3, #container .postlist-item h4 {
+  font-variant: small-caps;
+}
+/* line 88, ../sass/styles.scss */
+#container .postlist-item hr {
+  border: 2px solid;
+  margin: 10px 0px;
+}
+/* line 92, ../sass/styles.scss */
+#container .postlist-item .symbol {
+  font-family: serif;
+}
+/* line 97, ../sass/styles.scss */
+#container .postlist-category-code h1, #container .postlist-category-code h2, #container .postlist-category-code h3, #container .postlist-category-code h4, #container .postlist-category-code h5, #container .postlist-category-code h6 {
+  color: #17303f;
+}
+/* line 100, ../sass/styles.scss */
+#container .postlist-category-code hr {
+  border-color: #17303f;
+}
+/* line 105, ../sass/styles.scss */
+#container .postlist-category-life h1, #container .postlist-category-life h2, #container .postlist-category-life h3, #container .postlist-category-life h4, #container .postlist-category-life h5, #container .postlist-category-life h6 {
+  color: #6c0708;
+}
+/* line 108, ../sass/styles.scss */
+#container .postlist-category-life hr {
+  border-color: #6c0708;
+}
+/* line 113, ../sass/styles.scss */
+#container .postlist-category-physics h1, #container .postlist-category-physics h2, #container .postlist-category-physics h3, #container .postlist-category-physics h4, #container .postlist-category-physics h5, #container .postlist-category-physics h6 {
+  color: #a78e54;
+}
+/* line 116, ../sass/styles.scss */
+#container .postlist-category-physics hr {
+  border-color: #a78e54;
 }

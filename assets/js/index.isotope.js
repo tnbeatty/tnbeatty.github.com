@@ -10,11 +10,11 @@
 * all of the masonry. Based on Isotope's custommasonry custom behavior.
 */
 
+var postlistItemWidth = 250;
+
 $.Isotope.prototype._getCenteredMasonryColumns = function() {
 	this.width = this.element.width();
-
 	var parentWidth = this.element.parent().width();
-
 	// i.e. options.masonry && options.masonry.columnWidth
 	var colW = this.options.masonry && this.options.masonry.columnWidth ||
 		// or use the size of the first item
@@ -24,7 +24,6 @@ $.Isotope.prototype._getCenteredMasonryColumns = function() {
 
 	var cols = Math.floor( parentWidth / colW );
 	cols = Math.max( cols, 1 );
-
 	// i.e. this.masonry.cols = ....
 	this.masonry.cols = cols;
 	// i.e. this.masonry.columnWidth = ...
@@ -60,7 +59,6 @@ $.Isotope.prototype._masonryGetContainerSize = function() {
 		}
 		unusedCols++;
 	}
-
 	return {
 		height : Math.max.apply( Math, this.masonry.colYs ),
 		// fit container to columns that have been used;
@@ -69,14 +67,26 @@ $.Isotope.prototype._masonryGetContainerSize = function() {
 };
 
 $(function(){
-
 	var $container = $('#container');
-
 	$container.isotope({
-		itemSelector: '.postlist-item',
+		itemSelector : '.postlist-item',
 		masonry : {
-			columnWidth : 240
-		}
+			columnWidth : postlistItemWidth
+		},
+		getSortData : {
+			date : function ( $elem ) {
+				var array = $elem.find('.date').text().split('-');
+				array.unshift(array.pop());
+				// console.log(array.join().replace(/,/g,''));
+				return parseInt( array.join().replace(/,/g,'') );
+			}
+		},
+		sortBy : 'date',
+		sortAscending : false
 	});
-
 });
+
+// Replace headers with appropriate symbols
+$(".code.symbol").html("&Gamma;");
+$(".life.symbol").html("&Tau;");
+$(".physics.symbol").html("&Psi;");

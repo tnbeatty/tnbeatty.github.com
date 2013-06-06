@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "A Long Title About Not a Whole Lot"
-date:   2013-06-03 21:31:29
-categories: life
+date:   2013-06-05 21:31:29
+category: life
 excerpt: Chicken drumstick bacon fatback. Strip steak cow pork belly ground round. Sirloin pancetta pork belly chuck corned beef doner strip steak filet mignon turducken hamburger pork chop.
 ---
 

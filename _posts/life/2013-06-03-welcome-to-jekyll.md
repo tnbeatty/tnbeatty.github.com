@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to Jekyll"
 date:   2013-06-03 21:31:29
-categories: life
+category: life
 ---
 
 Bacon ipsum dolor sit amet andouille ball tip turkey shoulder capicola tongue bacon kielbasa tenderloin t-bone sausage frankfurter. <!-- more -->Biltong ground round beef ribs tongue tri-tip t-bone jerky jowl shank kielbasa pork belly pancetta sausage venison. Meatloaf t-bone cow bresaola prosciutto hamburger beef ribs frankfurter short loin tail ham pancetta. Ribeye bacon swine, corned beef pig ground round tenderloin pancetta. Frankfurter corned beef chicken turducken pork pig. Meatloaf pork ball tip, biltong drumstick sausage t-bone turducken shankle prosciutto.

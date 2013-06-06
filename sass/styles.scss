@@ -71,8 +71,50 @@ footer {
 
 #container {
 	margin: 20px auto;
+	span {
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+	}
 	.postlist-item {
+		h3, h4 {
+			font-variant: small-caps;
+		}
 		width: $postlist-item-width;
 		padding: 0px 20px;
+		hr {
+			border: 2px solid;
+			margin: 10px 0px;
+		}
+		.symbol {
+			font-family: serif;
+		}
+	}
+	.postlist-category-code {
+		h1, h2, h3, h4, h5, h6 {
+			color: $postlist-color-code;
+		}
+		hr {
+			border-color: $postlist-color-code;
+		}
+	}
+	.postlist-category-life {
+		h1, h2, h3, h4, h5, h6 {
+			color: $postlist-color-life;
+		}
+		hr {
+			border-color: $postlist-color-life;
+		}
+	}
+	.postlist-category-physics {
+		h1, h2, h3, h4, h5, h6 {
+			color: $postlist-color-physics;
+		}
+		hr {
+			border-color: $postlist-color-physics;
+		}
 	}
 }

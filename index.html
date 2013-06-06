@@ -1,12 +1,16 @@
 ---
 layout: default
-title: Nate's Homepage
+title: home
 ---
 
 <div id="container">
 	{% for post in site.posts %}
-	<div class="postlist-item">
-		<h4 class="subheader">{{ post.title }}</h4>
+	<div class="postlist-item postlist-category-{{ post.category }}">
+		<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+		<span>
+			<h5 class="subheader {{ post.category }} symbol left"></h5>
+			<h6 class="subheader date right">{{ post.date | date: "%m-%d-%y"}}</h6>
+		</span>
 		<hr>
 		<p>{{ post.excerpt }}</p>
 	</div>
