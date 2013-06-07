@@ -7,4 +7,7 @@ pygments: true
 # Only allow plugins that github will read
 safe: true
 
+# Make sure the MD rendering engine is maruku
+markdown: maruku
+
 excerpt_separator: "<!-- more -->"
