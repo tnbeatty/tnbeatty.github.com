@@ -15,4 +15,14 @@ $(document).ready(function() {
 		$(this).replaceWith('<h4 class="subheader">'+$(this).text()+'</h4>');
 	});
 
+	$('img').each(function() {
+		$NewImage = ['<a href="',
+			$(this).attr("src"),
+			'"><img src="',
+			$(this).attr('src'),
+			'" /></a>'
+		].join('');
+		$(this).replaceWith($NewImage);
+	});
+
 });
