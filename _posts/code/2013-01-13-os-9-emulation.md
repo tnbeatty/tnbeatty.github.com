@@ -8,7 +8,7 @@ excerpt: Nostalgic for the days when computer games looked like <a href="http://
 
 Fifteen years ago, I had [Power Pete](http://en.wikipedia.org/wiki/Power_Pete) (the first 1995 release of the precursor to the renamed 2001 software, MightyMike) installed on an old Macintosh [Performa 64](http://en.wikipedia.org/wiki/Power_Macintosh_6200). The Performa was a solid machine and ran Power Pete wonderfully. Occasional hiccups during particularly intense robot, bunny, and dinosour battles only added to its charm. Power pete was one of the few PC games that I played religiously, and I am sorry to report that he has been lost since my childhood.
 
-<img src="/assets/images/post_images/mightymike_grave.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px;" alt="Dead Power Pete"/>
+<img src="/assets/img/posts/mightymike_grave.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px;" alt="Dead Power Pete"/>
 
 Now, the Performa 64 is long gone and [Pangea Software](http://pangeasoft.net) never re-released Mighty Mike for Intel macs. A few days ago, I set out to resurrect Power Pete from his grave beneath Prehistoric Plaza. The biggest challenge was finding a way to run the old PowerPC software, especially because my modern mac OS no longer supports Apple's [Classic Environment](http://en.wikipedia.org/wiki/Classic_Environment). The task needed to be completed as follows:
 
@@ -24,7 +24,7 @@ First, you're going to need a PowerPC Emulator. Essentially, this is a software 
 
 ####The Steps:
 
-<img src="/assets/images/post_images/mightymike_install1.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 500px;" alt="Finder Window"/>
+<img src="/assets/img/posts/mightymike_install1.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 500px;" alt="Finder Window"/>
 
 1. Download Sheep Shaver by clicking [here](http://www.xs4all.nl/~ronaldpr/sheepshaverforum/SheepShaver_UB_20120715.zip).
 2. Find a file named `SheepShaver_UB_20120715.zip` in your downloads folder. Unzip the file by double-clicking on it. If the file was automatically unzipped, you might just see a folder named `SheepShaver_UB_20120715`, in which case you can skip the unzipping step.
@@ -46,7 +46,7 @@ While you have your `SheepShaver` folder open, make a new folder inside it calle
 
 ###Download Mac OS 9
 
-<img src="/assets/images/post_images/mightymike_install2.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 200px;" alt="SheepShaver Folder in Finder"/>
+<img src="/assets/img/posts/mightymike_install2.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 200px;" alt="SheepShaver Folder in Finder"/>
 
 Now we need to download and install an image of the old OS 9 operating system.
 
@@ -66,13 +66,13 @@ Now we need to set up the emulator and all of the preferences. This is how we te
 3. Make sure the "Setup" tab is selected.
 4. Add the ROM file by clicking "Browse" and finding and opening the file that we renamed `ROM`. It should be contained within your SheepShaver folder.
 5. Now click "Create" under the empty list of volumes.
-6. Save your new volume in the `SheepShaver` folder. Name the file `MacOS9` and change "Volume Size". <img src="/assets/images/post_images/mightymike_install3.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
+6. Save your new volume in the `SheepShaver` folder. Name the file `MacOS9` and change "Volume Size". <img src="/assets/img/posts/mightymike_install3.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
 1. Now add the `OS9.img` file to the list of volumes. Click "Add" under the list and open up your `OS9.img` file.
 7. Now change the value for Unix Root. Hit Browse and find the Shared folder that you created earlier inside your `SheepShaver` folder. Then hit "open".
 8. Change the value of RAM size to 256 or 512 (256 will work just fine).
-9. When you're done, your screen should look like the one below: <img src="/assets/images/post_images/mightymike_install4.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br /> Your filepath for Unix Root might look a little different than the one in my picture. That's ok.
-10. Now select the Audio / Video settings. Leave the audio part alone, and make the appropriate video settings to match those in the image below: <br /><img src="/assets/images/post_images/mightymike_install5.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
-11. Now select the Miscellaneous tab. Check the appropriate boxes as reflected in the image below:<br /><img src="/assets/images/post_images/mightymike_install6.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
+9. When you're done, your screen should look like the one below: <img src="/assets/img/posts/mightymike_install4.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br /> Your filepath for Unix Root might look a little different than the one in my picture. That's ok.
+10. Now select the Audio / Video settings. Leave the audio part alone, and make the appropriate video settings to match those in the image below: <br /><img src="/assets/img/posts/mightymike_install5.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
+11. Now select the Miscellaneous tab. Check the appropriate boxes as reflected in the image below:<br /><img src="/assets/img/posts/mightymike_install6.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
 12. Quit SheepShaver by pressing `Control-Escape`.
 
 ###Install Power Pete
@@ -86,7 +86,7 @@ Now we can install Power Pete, AKA Mighty Mike. I found that the 2001 release of
 
 ###Play Power Pete!
 
-<img src="/assets/images/post_images/mightymike_install7.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 300px;" alt="SheepShaver Folder in Finder"/>
+<img src="/assets/img/posts/mightymike_install7.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 300px;" alt="SheepShaver Folder in Finder"/>
 
 Get ready to slay some fairy tale creatures and rescue rabbits! Fire up SheepShaver. It should boot up OS 9 and take you to a view of your desktop. Double click on the desktop icon that says "Unix" and inside, open up the Mighty Mike folder. Inside the folder, scroll all of the way down and find the icon that says "Mighty Mike". Double click that icon. Play Away! (Note that you'll need a registration code).
 

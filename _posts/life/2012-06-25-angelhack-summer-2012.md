@@ -6,11 +6,11 @@ category: life
 excerpt: The Strabo team joined forces with Worth Baker and Teddy Knox to code up a storytelling application at the 2012 AngelHack hackathon in Boston.
 ---
 
-<img src="/assets/images/post_images/angelhack/ahack_logo.png" style="float: left; box-shadow: none; margin-top: 0px; margin-bottom: 0px;" alt="Angelhack Logo"/>
+![](/assets/img/posts/ahack_logo.png)
 
 This morning, I returned from my first hackathon, [AngelHack](http://angelhack.com/) in Boston. The [Strabo](http://strabogis.com) crew teamed up with Middlebury students [Teddy Knox](http://www.teddyknox.me/) and [Worth Baker](http://worthbak.com/) to form Team Natarré. Of course I live-tweeted the whole thing (as did Worth) [#AngelHackBos](https://twitter.com/#!/search/%23AngelHackBOS), but I figured I should give it a more thorough overview in a blog post.
 
-![Team Hacks](/assets/images/post_images/angelhack/ahack_dinner.JPG)
+![Team Hacks](/assets/img/posts/ahack_dinner.jpg)
 
 Because no one on the team had competed in a hackathon before, we didn't really know what to expect. We sat down the night before to decide what we wanted to build. After tossing a couple of ideas on the table, Worth suggested a story sharing social network. He pitched his idea, a website to showcase infrequently told and underappreciated yet powerful stories that would not otherwise have a stage. The idea was solid and we figured that technologically, it would be feasible to get an MVP built in our alloted 24 hours at AngelHack. It would be called Natarré.
 
@@ -20,21 +20,19 @@ I arrived at the [Microsoft N.E.R.D. Center](http://microsoftcambridge.com/Defau
 
 Of particular note were the demos by [RIM](http://www.rim.com/) and [Microsoft](http://www.microsoft.com/en-us/default.aspx). The Microsoft talk featured [Windows Azure](http://www.windowsazure.com/en-us/), their public cloud hosting solution. I have long been a Microsoft skeptic, and although the demo wasn't very good (they had some technical difficulties, although the fault was not thier own), the product looks excellent. I was impressed by the cross-platform virtual machine support and (surprise) the user interface of the management site. I haven't played around with Azure myself, but from what I can tell, they are at least on the same playing field as the best in the business, [Heroku](http://www.heroku.com/). 
 
-![Our View](/assets/images/post_images/angelhack/ahack_boston.JPG)
+![Our View](/assets/img/posts/ahack_boston.jpg)
 
 The RIM talk was interesting because I had completely forgotten that [Blackberry](http://us.blackberry.com/) was still a product. I have seen recent user data and app revenue charts that don't even include Blackberry devices as a category and they seemed completely gone from the market landscape (except for their occasional appearance in a [negative news](http://www.cbsnews.com/8301-505123_162-57460107/rim-shares-dive-to-nine-year-low-after-downgrade/) article). With shares at an all time low, $9.36 at the end of the day on June 25, they are desperate to build developer support. If they have hope of surviving, they need a robust developer network and app marketplace to compete with Apple and Android. Of course, they completely understand this and seem to be trying to revamp their company and their product lineup. They seem to be doing everything they can to support developers and their new devices natively support a remarkable number of frameworks and languages. I also got my hands on the new playbook, which seems like a very cool piece of gear. I do like the user interface and I think they have some good ideas with the way that the touch screen includes gestures over the bezel. They are obviously working hard to deliver new products that suit both devs and customers.
 
-![Team Hacks](/assets/images/post_images/angelhack/ahack_team.JPG)
+![Team Hacks](/assets/img/posts/ahack_team.jpg)
 
 ###The Hack
 
 After a delicious lunch generously sponsored by [Whole Foods](http://www.wholefoodsmarket.com/) and a visit to the local Apple Store and Best Buy, we settled back into the NERD center for our 2:00pm coding starttime. At that point, we still had to develop the app idea, hammer out a user interface, build and API spec, and figure out our workflow as a team before we could even put eyes on the screen and fingers on the keyboard. It was nearing dinnertime before I had even opened xcode and I made my first real commit after dinner at about 9:00pm after the completion of the login models, views, and controllers. At that point, I grabbed my first of two beers (yay, open bar!) and started to hack away at the view layout.
 
-<img src="/assets/images/post_images/angelhack/ahack_destruction.JPG" style="float: left;" />
+![](/assets/img/posts/ahack_destruction.jpg)
 
 Saturday night was long - I personally polished off enough Red Bull to kill a small hippopotamus. I was in charge of building the iPhone application, which was essentially a story reading app. The components of the app included the ability to login with your Natarré account (or create an account), view and sort lists of stories by most popular, most recent, tag stories as favorites, add them to a reading list for later consumption, and also view lists of your personal favorites or read-it-laters. Of course, all of the navigation controllers were written custom to support a custom interface and I did a reasonably complicated (for a hackathon) subclass of a table controller to support pull-to-refresh. Teddy spearheaded the Android app which needed similar functionality and Will wrote the web app, which he crafted on the Rails framework. Parker and Worth worked as a team to design the user interface and app flow and then made beautiful custom graphics for the whole thing. Later in the night, or should I say early in the morning, Worth made an exceptional marketing video to demonstrate our work and the idea behind Natarré to the judges.
-
-![Natarré](/assets/images/post_images/angelhack/iTunesArtwork.png)
 
 ###The Product
 

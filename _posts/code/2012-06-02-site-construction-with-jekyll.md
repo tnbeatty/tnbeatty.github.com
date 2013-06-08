@@ -6,12 +6,6 @@ category: code
 excerpt: How I configured my old Jekyll site - because writing about how you built your jekyll site if you used jekyll to build your site seems to be a trend among devs.
 ---
 
-{{ page.date | date_to_string }} - Woodstock, VT
-
-<!--
-Post content goes here.
--->
-
 Now that I have the framework of my website constructed, I figured it would be a good time to write about how it is set up.
 
 I decided to use Tom Preston-Werner's [Jekyll](https://github.com/mojombo/jekyll) generator. Using Jekyll makes it easy to build new posts and pages quickly and in markdown (my favorite... easy webdev). I hosted the site on [git pages](http://pages.github.com/) because it is convenient to edit, push and track changes, and it's free (a big improvement over [FatCow](http://www.fatcow.com/), which costs me 56 bucks every year).
