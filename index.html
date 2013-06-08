@@ -1,17 +1,22 @@
 ---
 layout: default
-title: Home
+title: home
 ---
 
-<div class="content">
-	<h2>Nate Beatty's Personal Homepage</h2>
-
-	<p>I am thoroughly dissatisfied with the state of affairs on this page; it looks terrible, it's not well organized, etc. There are mouseover effects that don't work on most browsers and even more egregious, there are mouseover effects in the first place. Someday, when I have the time, I will redo this and make it slick. For now, I apologize for the mess.</p>
-
+<div id="container">
+	{% for post in site.posts limit: 20 %}
+	<div class="postlist-item postlist-category-{{ post.category }}">
+		<a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+		<span>
+			<h5 class="{{ post.category }} symbol left"></h5>
+			<h6 class="subheader date right">{{ post.date | date: "%m-%d-%y"}}</h6>
+		</span>
+		<hr>
+		<p>{{ post.excerpt }}</p>
+	</div>
+	{% endfor %}
 </div>
 
-<div class="sidebar">
-
-	{% include social-media.html %}
-
-</div>
+<script src="/assets/js/vendor/jquery.js"></script>
+<script src="/assets/js/vendor/jquery.isotope.min.js"></script>
+<script src="/assets/js/index.isotope.js"></script>

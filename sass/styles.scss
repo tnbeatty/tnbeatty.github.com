@@ -1,0 +1,163 @@
+/*
+* styles.scss, styles.css
+*
+* Written by Nate Beatty 
+* June 2013
+*
+* This file contains any custom styling unaffiliated
+* with Zurb Foundation or other third party stylesheets.
+* CSS classes and ID's have `tnb` prefix to prevent conflicts.
+*/
+
+@import "settings";
+@import "fonts";
+
+/* global */
+
+//@include codePro("normal");
+
+//h1, h2, h3, h4, h5, h6 {
+//	font-family: "CodePro", Arial, sans-serif;
+//}
+
+#content {
+	margin-top: 15px;
+}
+
+#tnb_profile {
+	text-align: center;
+	#tnb_header {
+		height: 250px;
+		background: url(/assets/img/header.jpg) no-repeat center;
+	}
+	#tnb_pic {
+		$tnb_pic_width: 150px;
+		margin: -($tnb_pic_width / 2) auto 0px auto;
+		width: $tnb_pic_width;
+		height: $tnb_pic_width;
+		border: 4px white solid;
+		border-radius: $tnb_pic_width / 2;
+		-webkit-border-radius: $tnb_pic_width / 2;
+		-moz-border-radius: $tnb_pic_width / 2;
+		background: url(/assets/img/profile.jpg) no-repeat;
+		background-size: $tnb_pic_width;
+		$tnb_pic_shadow_size: 5px;
+		box-shadow: 0 0 $tnb_pic_shadow_size rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 $tnb_pic_shadow_size rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 $tnb_pic_shadow_size rgba(0, 0, 0, .8);
+	}
+}
+
+#tnb_menu {
+	text-align: center;
+}
+
+#tnb_menulist {
+	i {
+		font-size: emCalc(20px);
+	}
+	li {
+		display: inline-block;
+		float: none;
+	}
+}
+
+footer {
+	padding-bottom: 10px;
+	color: $footer-text-color;
+	a {
+		color: $footer-text-color;
+		border-bottom: dashed 1px;
+	}
+	a:hover {
+		color: darken($footer-text-color, 5%);
+		border-bottom: dashed 1px;
+	}
+	#tnb_footer_left {
+
+	}
+	#tnb_footer_right {
+		text-align: right;
+		li {
+			float: right;
+		}
+	}
+}
+
+/* index */
+
+#container {
+	margin: 20px auto;
+	span {
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+	}
+	.postlist-item {
+		h3, h4 {
+			//font-variant: small-caps;
+		}
+		width: $postlist-item-width;
+		padding: 0px 20px;
+		hr {
+			border: 2px solid;
+			margin: 10px 0px;
+		}
+		.symbol {
+			font-family: serif;
+			font-weight: 600;
+		}
+	}
+	.postlist-category-code {
+		h1, h2, h3, h4, h5, h6 {
+			color: $postlist-color-code;
+		}
+		hr {
+			border-color: $postlist-color-code;
+		}
+	}
+	.postlist-category-life {
+		h1, h2, h3, h4, h5, h6 {
+			color: $postlist-color-life;
+		}
+		hr {
+			border-color: $postlist-color-life;
+		}
+	}
+	.postlist-category-physics {
+		h1, h2, h3, h4, h5, h6 {
+			color: $postlist-color-physics;
+		}
+		hr {
+			border-color: $postlist-color-physics;
+		}
+	}
+}
+
+/* about */
+.tnb_title {
+//	text-align: center;
+}
+
+/* post */
+.post {
+	img {
+		padding-left: 50px;
+		margin-left: 100px;
+		border-left: 4px solid red;
+		max-height: 300px;
+//		float: right;
+	}
+}
+.code {
+	img { border-color: $postlist-color-code; }
+}
+.life {
+	img { border-color: $postlist-color-life; }
+}
+.physics {
+	img { border-color: $postlist-color-physics; }
+}

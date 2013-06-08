@@ -1,18 +1,13 @@
-name: tnbeatty$ gcc ~/thoughts.brain
-description: I'm not lazy - my code's just compiling.
-url: http://tnbeatty.github.com
-author: Nate Beatty
+# The name of the site
+name: tnbeatty
 
-email: nate@strabogis.com
-
-# Pygments for syntax highlighting
+# Syntax highlighting using pygments
 pygments: true
 
-# Server will automatically regenerate modified files
-auto: true
+# Only allow plugins that github will read
+safe: true
 
-# Do not publish posts with future date
-future: false
+# Make sure the MD rendering engine is maruku
+markdown: maruku
 
-# Late Symantic Indexing
-lsi: false
+excerpt_separator: "<!-- more -->"

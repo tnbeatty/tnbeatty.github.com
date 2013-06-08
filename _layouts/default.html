@@ -1,54 +1,75 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>Nate Beatty | {{ page.title }}</title>
-   <meta name="author" content="Nate Beatty" />
-   <!--<link href="http://feeds.feedburner.com/natebeatty?" rel="alternate" title="Nate Beatty" type="application/atom+xml" />-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{{ site.name }} | {{ page.title }}</title>
 
-   <!-- syntax highlighting CSS -->
-   <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" />
 
-   <!-- Homepage CSS -->
-   <link rel="stylesheet" href="/assets/css/screen.css" type="text/css" />
+	<link rel="stylesheet" href="/stylesheets/app.css" />
+	<link rel="stylesheet" href="/stylesheets/social_foundicons.css">
+	<link rel="stylesheet" href="/stylesheets/styles.css" />
+	<link rel="stylesheet" href="/stylesheets/syntax.css">
 
-   <!-- Load jQuery from Google -->
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-   <!-- Load javascript and jQuery plugins -->
-   <script src="/assets/js/jquery.xdomainajax.js"></script>
-
-   <!-- Code for the ShareThis buttons on blog posts -->
-   <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-   <script type="text/javascript">stLight.options({publisher: "fe2f9ad0-d56a-475a-addf-fe5daac54530"}); </script>
+	<script src="/assets/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
 
-	{% include header.html %}
+	<div class="row" id="content">
+		<div class="large-4 columns" id="tnb_profile">
+			<div id="tnb_header"></div>
+			<div id="tnb_pic"></div>
+			<h3><a href="/">@tnbeatty</a></h3>
+			<ul class="inline-list" id="tnb_menulist">
+				<li><a href="https://github.com/tnbeatty"><i class="foundicon-github"></i></a></li>
+				<li><a href="https://www.facebook.com/tnbeatty"><i class="foundicon-facebook"></i></a></li>
+				<li><a href="https://twitter.com/tnbeatty"><i class="foundicon-twitter"></i></a></li>
+				<li><a href=""><i class="foundicon-rss"></i></a></li>
+			</ul>
+			<p>Bacon kielbasa doner andouille. Sausage fatback pork loin cow ground round frankfurter ball tip tongue drumstick corned beef swine bacon venison. Spare ribs turkey doner sirloin.</p>
 
-	<div class="wrapper">
+			<div id="tnb_menu">
+				{% if page.url == '/index.html' %}
+				<ul class="inline-list" id="tnb_menulist">
+					<li><a href="#" data-filter="*">show all</a></li>
+					<li><a href="#" data-filter=".postlist-category-physics">physics</a></li>
+					<li><a href="#" data-filter=".postlist-category-code">code</a></li>
+					<li><a href="#" data-filter=".postlist-category-life">life</a></li>
+				</ul>
+				{% else %}
+				<a href="/">&larr; View All Posts</a>
+				{% endif %}
+			</div>
 
-		<div class="menu">{% include menu.html %}</div>
+		</div>
 
-		{{ content }}
+		<div class="large-8 columns">
+			<div class="row">
+				<div class="large-12 columns">
 
-      <div class="footer">Made by <a href="http://natebeatty.com">Nate</a></div>
+					{{ content }}
 
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="large-12 columns">
+				<hr>
+				<div class="large-6 columns" id="tnb_footer_left">
+					<p>Concocted by <a href="mailto:nate.beatty@gmail.com">Nate Beatty</a> using <a href="http://foundation.zurb.com">Foundation</a>, <a href="http://isotope.metafizzy.co">Isotope</a>, and <a href="http://jekyllrb.com">Jekyll</a>.</p>
+				</div>
+				<div class="large-6 columns" id="tnb_footer_right">
+					<p><a href="/about.html">About</a></p>
+				</div>
+			</div>
+		</footer>
 	</div>
 
-   <!-- Google analytics -->
-   <script type="text/javascript">
+	{% include scripts.html %}
 
-     var _gaq = _gaq || [];
-     _gaq.push(['_setAccount', 'UA-36134872-1']);
-     _gaq.push(['_setDomainName', 'natebeatty.com']);
-     _gaq.push(['_trackPageview']);
-
-     (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-
-   </script>
 </body>
+</html>
