@@ -141,3 +141,23 @@ footer {
 .tnb_title {
 //	text-align: center;
 }
+
+/* post */
+.post {
+	img {
+		padding-left: 50px;
+		margin-left: 100px;
+		border-left: 4px solid red;
+		max-height: 300px;
+//		float: right;
+	}
+}
+.code {
+	img { border-color: $postlist-color-code; }
+}
+.life {
+	img { border-color: $postlist-color-life; }
+}
+.physics {
+	img { border-color: $postlist-color-physics; }
+}

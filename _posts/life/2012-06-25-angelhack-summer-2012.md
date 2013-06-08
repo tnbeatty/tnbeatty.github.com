@@ -14,7 +14,8 @@ This morning, I returned from my first hackathon, [AngelHack](http://angelhack.c
 
 Because no one on the team had competed in a hackathon before, we didn't really know what to expect. We sat down the night before to decide what we wanted to build. After tossing a couple of ideas on the table, Worth suggested a story sharing social network. He pitched his idea, a website to showcase infrequently told and underappreciated yet powerful stories that would not otherwise have a stage. The idea was solid and we figured that technologically, it would be feasible to get an MVP built in our alloted 24 hours at AngelHack. It would be called Natarré.
 
-###The Setup
+The Setup
+===
 
 I arrived at the [Microsoft N.E.R.D. Center](http://microsoftcambridge.com/Default.aspx) with Team Natarré at 9:00am on Saturday June 23. We met some of our competitors and talked generally about our product over breakfast. The event sponsors gave talks, many of which were relevant and interesting. 
 
@@ -26,7 +27,8 @@ The RIM talk was interesting because I had completely forgotten that [Blackberry
 
 ![Team Hacks](/assets/img/posts/ahack_team.jpg)
 
-###The Hack
+The Hack
+===
 
 After a delicious lunch generously sponsored by [Whole Foods](http://www.wholefoodsmarket.com/) and a visit to the local Apple Store and Best Buy, we settled back into the NERD center for our 2:00pm coding starttime. At that point, we still had to develop the app idea, hammer out a user interface, build and API spec, and figure out our workflow as a team before we could even put eyes on the screen and fingers on the keyboard. It was nearing dinnertime before I had even opened xcode and I made my first real commit after dinner at about 9:00pm after the completion of the login models, views, and controllers. At that point, I grabbed my first of two beers (yay, open bar!) and started to hack away at the view layout.
 
@@ -34,11 +36,13 @@ After a delicious lunch generously sponsored by [Whole Foods](http://www.wholefo
 
 Saturday night was long - I personally polished off enough Red Bull to kill a small hippopotamus. I was in charge of building the iPhone application, which was essentially a story reading app. The components of the app included the ability to login with your Natarré account (or create an account), view and sort lists of stories by most popular, most recent, tag stories as favorites, add them to a reading list for later consumption, and also view lists of your personal favorites or read-it-laters. Of course, all of the navigation controllers were written custom to support a custom interface and I did a reasonably complicated (for a hackathon) subclass of a table controller to support pull-to-refresh. Teddy spearheaded the Android app which needed similar functionality and Will wrote the web app, which he crafted on the Rails framework. Parker and Worth worked as a team to design the user interface and app flow and then made beautiful custom graphics for the whole thing. Later in the night, or should I say early in the morning, Worth made an exceptional marketing video to demonstrate our work and the idea behind Natarré to the judges.
 
-###The Product
+The Product
+===
 
 We ended up accomplishing most of an MVP. By the 2:00pm deadline on Sunday we had a working application, as bug-free as we could make it, and were pretty confident of its functionality if it came time for us to show it off to the crowd. Although many secondary features were left out in a rush to build a more robust core product, we wrote a tremendous amount of code in such a short period of time. We started the 24 hour hack with only a slight concept of what the final product would look like and by the end, we had designed three applications (web and two mobile), coded the entire thing by hand - it all had to be typed out in the moment, and filmed, compiled, and edited a ninety second marketing pitch. Sweet.
 
-###The Takaway
+The Takaway
+===
 
 On Sunday, we walked away without our name on the list of finalists. We weren't selected to do a live demo and compete for a trip to the finals in Palo Alto, California. Although we were happy to leave a little early and get to bed, it was disappointing not to make the final round, yet somewhat expected given the product that we built. We learned an awful lot, however. Working under pressure is always a learning experience, and a different learning experience depending on the team. 
 
@@ -46,7 +50,8 @@ For this competition, the team was excellent. I couldn't have asked to work with
 
 Although the ideas were there, however, the tech lacked something that some of the other teams seemed to conquer. While we spend a lot of time thinking about the interesting aspects of our product and focusing on the overall vision, we failed to do something unique with sponsor API's and ended up not presenting the best tech to the judges. AngelHack is, after all, a hackathon. It is more a place to try to make bleeding edge, but buggy tech in a short time, not a place to develop a product. We built a social network with a like button and a reading list - it turns out that has been done before.
 
-###The Future
+The Future
+===
 
 I look forward to entering another hackathon down the road. The energy at AngelHack Boston was great and the people that I met (most of whom were far better programmers than I) fully embodied the hacker culture - nice, helpful people who were interested in coding for the sake of the technology, not for the sake of the money. It was a good networking experience and opened my eyes to new programming techniques and tools.
 

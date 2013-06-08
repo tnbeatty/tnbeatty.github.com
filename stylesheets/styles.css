@@ -132,3 +132,26 @@ footer #tnb_footer_right li {
 }
 
 /* about */
+/* post */
+/* line 147, ../sass/styles.scss */
+.post img {
+  padding-left: 50px;
+  margin-left: 100px;
+  border-left: 4px solid red;
+  max-height: 300px;
+}
+
+/* line 156, ../sass/styles.scss */
+.code img {
+  border-color: #17303f;
+}
+
+/* line 159, ../sass/styles.scss */
+.life img {
+  border-color: #6c0708;
+}
+
+/* line 162, ../sass/styles.scss */
+.physics img {
+  border-color: #a78e54;
+}
