@@ -12,7 +12,8 @@ I decided to use Tom Preston-Werner's [Jekyll](https://github.com/mojombo/jekyll
 
 After laying out the structure of the site and doing some quick CSS styling, I had a pretty decent site in just a couple of hours. I ran into a couple of snags, however. Some googling revealed the answers - jekyll sites seem to be becoming pretty popular.
 
-### CSS Transitions
+CSS Transitions
+---
 
 I get my hands dirty with CSS from time to time, but I am by no means a [CSS guru](http://willpots.com). Most of my time these days is spent programming in Objective-C for iOS. I was pleased to stumble upon the "transition" tag. Replacing jQuery or JavaScript with CSS only makes things faster and more convenient.
 
@@ -36,7 +37,8 @@ a:hover {
 
 Just specify whatever tag you would like to change and the time over which the browser should linearly animate that change. Piece of cake.
 
-### SASS and CSS
+SASS and CSS
+---
 
 Once I got all of my CSS figured out, I remembered how much I like [SASS](http://sass-lang.com/). SASS is compact, easy to read, and easy to keep organized. Turns out it's easy to use with Jekyll, too, especially since Jekyll [plugin support](https://github.com/mojombo/jekyll/wiki/Plugins). Read about converting in general under the heading "[converters](https://github.com/mojombo/jekyll/wiki/Plugins)." Available plugins are listed at the bottom - Instead of writing one from scratch, I used the [SASS scss Converter by Mark Wolfe](https://gist.github.com/960150).
 
@@ -75,7 +77,8 @@ end
 
 Of course, after doing this, you can still use standard CSS within a .scss file as SASS is a strict superset of CSS. Also, .css files will not be touched by the sass converter.
 
-### SASS Highlighting in SublimeText
+SASS Highlighting in SublimeText
+---
 
 I love developing in [Sublime](http://www.sublimetext.com/). They have syntax highlighting support for most common languages, but I needed to install a custom .tmbundle in this case. This is easy enough to do - thanks to [kuroir](https://github.com/kuroir) for his work. Run the following in terminal:
 
@@ -84,6 +87,7 @@ I love developing in [Sublime](http://www.sublimetext.com/). They have syntax hi
 
 Restart Sublime and you're good to go.
 
-### Github
+Github
+---
 
 If you are interested in exploring the source code further, [check it out on github](https://github.com/tnbeatty/tnbeatty.github.com).

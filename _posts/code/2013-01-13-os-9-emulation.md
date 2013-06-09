@@ -18,11 +18,13 @@ Now, the Performa 64 is long gone and [Pangea Software](http://pangeasoft.net) n
 
 With a couple of emulators out there, both downloadable apps, and binaries that you need to compile yourself, it is difficult to know what will work best on your mac. There are also different ROM's, as well as different classic operating systems and even two seperate installations of Power Pete! It took me a while to sift through all of the information and do some custom tweaking. If you have a modern Intel mac running OS X (I have 10.8.2), you can start plugging away at bears with your nerf launcher, saving bunnies, and eating fruit before you know it. The whole process shouldn't take more than about 15 minutes; I'll walk you through it.
 
-###Installing the Emulator
+Installing the Emulator
+===
 
 First, you're going to need a PowerPC Emulator. Essentially, this is a software program that translates program commands from code that runs on an old Apple processor into code that runs on a new Intel processor (like the one you probably have in your macbook). The best one that I have found is an open source project called [Sheep Shaver](http://sheepshaver.cebix.net) (a "Shape Shifter" pun that relates to an even earlier mac emulator). For those interested, the git repo for the code is [here](https://github.com/cebix/macemu).
 
-####The Steps:
+The Steps:
+---
 
 <img src="/assets/img/posts/mightymike_install1.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 500px;" alt="Finder Window"/>
 
@@ -30,36 +32,43 @@ First, you're going to need a PowerPC Emulator. Essentially, this is a software 
 2. Find a file named `SheepShaver_UB_20120715.zip` in your downloads folder. Unzip the file by double-clicking on it. If the file was automatically unzipped, you might just see a folder named `SheepShaver_UB_20120715`, in which case you can skip the unzipping step.
 3. Rename this folder `SheepShaver` and move it to someplace a little more permanent. I put mine in my `Applications` folder. To the right is a screenshot of my finder window after this step.
 
-###Loading the ROM and the OS
+Loading the ROM and the OS
+===
 
 Next, you need Macintosh computer ROM. For a number of reasons, this is difficult to find. Lucky for us, the internet is full of people who like vintage computer binaries. Ha.
 
-####The Steps:
+The Steps:
+---
 
 1. Download a ROM file [here](http://www.redundantrobot.com/macemulator/newworld86.rom.zip).
 2. Find the file in your downloads folder and unzip it if necessary. Rename the file from `newworld86.rom` to `ROM`, without the file extension. This can be easier said than done. If you experience any difficulties making sure the file has no extension, select the file (single-click to highlight) and then select `File > Get Info`. In the window that pops up, find where it says "Name & Extension" and in the box below, change the text to `ROM`. Then, close the info window.
 Now, drag the file that you just named `ROM` into your `SheepShaver` folder in applications.
 
-###Create a shared folder
+Create a shared folder
+===
 
 While you have your `SheepShaver` folder open, make a new folder inside it called `Shared`. This will come in handy later.
 
-###Download Mac OS 9
+Download Mac OS 9
+===
 
 <img src="/assets/img/posts/mightymike_install2.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 200px;" alt="SheepShaver Folder in Finder"/>
 
 Now we need to download and install an image of the old OS 9 operating system.
 
-####The Steps:
+The Steps:
+---
 
 1. Download the OS [here](http://www.redundantrobot.com/macemulator/OS9.img).
 3. Move your new `OS9.img` file into your SheepShaver folder. The contents of your SheepShaver folder should now look like the image on the right.
 
-###Configuring the Emulator
+Configuring the Emulator
+===
 
 Now we need to set up the emulator and all of the preferences. This is how we tell the emulator what ROM to use, how much memory to use, etc. This is the last step in the OS setup process.
 
-####The Steps
+The Steps
+---
 
 1. Go ahead and double-click on `SheepShaver` with sheep icon in your SheepShaver folder to start up the emulator. You should see a grey window with a folder and a question mark.
 2. Open up preferences just like you would in any other app by clicking on `SheepShaver > Preferences`.
@@ -75,16 +84,19 @@ Now we need to set up the emulator and all of the preferences. This is how we te
 11. Now select the Miscellaneous tab. Check the appropriate boxes as reflected in the image below:<br /><img src="/assets/img/posts/mightymike_install6.png" style="float: none; box-shadow: none; margin: 0px auto; width: 600px;" alt="Volume Create Window"/> <br />
 12. Quit SheepShaver by pressing `Control-Escape`.
 
-###Install Power Pete
+Install Power Pete
+===
 
 Now we can install Power Pete, AKA Mighty Mike. I found that the 2001 release of Mighty Mike was more readily available online, so that's the one I used. The only difference between Mighty Mike and Power Pete is the character's name and a couple of graphics settings - they're both the same classic game.
 
-####The Steps:
+The Steps:
+---
 1. Download the trial [here](http://www.pangeasoft.net/mightymike/files/Mighty%20Mike.zip).
 2. Unzip the downloaded file if necessary.
 3. Drag the `Mighty Mike` folder into the `Shared` folder located inside your `SheepShaver` folder.
 
-###Play Power Pete!
+Play Power Pete!
+===
 
 <img src="/assets/img/posts/mightymike_install7.png" style="float: right; box-shadow: none; margin-top: 0px; margin-bottom: 0px; width: 300px;" alt="SheepShaver Folder in Finder"/>
 
