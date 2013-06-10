@@ -33,7 +33,8 @@
 	text-align: center;
 	#tnb_header {
 		height: 250px;
-		background: url(/assets/img/header.jpg) no-repeat center;
+		background: url(/assets/img/header.jpg) no-repeat;
+		background-position: center;
 	}
 	#tnb_pic {
 		$tnb_pic_width: 150px;
