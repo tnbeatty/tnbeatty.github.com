@@ -15,14 +15,28 @@ $(document).ready(function() {
 		$(this).replaceWith('<h4 class="subheader">'+$(this).text()+'</h4>');
 	});
 
-	$('img').each(function() {
-		$NewImage = ['<a href="',
-			$(this).attr("src"),
+	$('img').each(function(index) {
+		$modalName = 'modal-' + index;
+		$imgLink = $(this).attr('src');
+		$newImage = ['<a href="#" data-reveal-id="',
+			$modalName,
 			'"><img src="',
-			$(this).attr('src'),
+			$imgLink,
+			'" alt="',
+			$(this).attr('alt'),
 			'" /></a>'
 		].join('');
-		$(this).replaceWith($NewImage);
+		$(this).replaceWith($newImage);
+		$theModal = ['<div id="'+ $modalName +'" class="reveal-modal">',
+			'<h4 class="subheader">'+$(this).attr('alt')+'</h4>',
+			'<div class="row"><div class="small-8 small-centered columns image">',
+			'<img src="'+ $imgLink +'" />',
+			'</div></div>',
+			'<a class="close-reveal-modal">&#215;</a>',
+			'</div>'
+		].join('');
+
+		$('body').append($theModal);
 	});
 
 });

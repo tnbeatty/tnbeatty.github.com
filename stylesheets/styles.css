@@ -153,17 +153,22 @@ footer #tnb_footer_right li {
   max-height: 300px;
 }
 
-/* line 163, ../sass/styles.scss */
+/* line 162, ../sass/styles.scss */
 .code img {
   border-color: #17303f;
 }
 
-/* line 166, ../sass/styles.scss */
+/* line 165, ../sass/styles.scss */
 .life img {
   border-color: #6c0708;
 }
 
-/* line 169, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 .physics img {
   border-color: #a78e54;
+}
+
+/* line 172, ../sass/styles.scss */
+.reveal-modal .image {
+  text-align: center;
 }
