@@ -2,7 +2,7 @@
 layout: post
 title: Hello World
 date: 2012-05-27
-category: code
+category: life
 excerpt: My redesigned blog/site about tech and physics, biking and hiking... it's for dorks.
 ---
 
