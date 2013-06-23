@@ -82,8 +82,8 @@ SASS Highlighting in SublimeText
 
 I love developing in [Sublime](http://www.sublimetext.com/). They have syntax highlighting support for most common languages, but I needed to install a custom .tmbundle in this case. This is easy enough to do - thanks to [kuroir](https://github.com/kuroir) for his work. Run the following in terminal:
 
-		$ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-		$ git clone git://github.com/kuroir/SCSS.tmbundle.git "SCSS"
+	$ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+	$ git clone git://github.com/kuroir/SCSS.tmbundle.git "SCSS"
 
 Restart Sublime and you're good to go.
 

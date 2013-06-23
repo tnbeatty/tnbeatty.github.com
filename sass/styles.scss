@@ -157,6 +157,12 @@ float: left;
 		border-left: 4px solid red;
 		max-height: 300px;
 	}
+	pre {
+		background-color: darken(#fff, 10%);
+		padding: 10px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
 }
 .code {
 	img { border-color: $postlist-color-code; }

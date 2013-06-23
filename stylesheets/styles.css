@@ -152,23 +152,30 @@ footer #tnb_footer_right li {
   border-left: 4px solid red;
   max-height: 300px;
 }
+/* line 160, ../sass/styles.scss */
+.post pre {
+  background-color: #e6e6e6;
+  padding: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 
-/* line 162, ../sass/styles.scss */
+/* line 168, ../sass/styles.scss */
 .code img {
   border-color: #17303f;
 }
 
-/* line 165, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 .life img {
   border-color: #6c0708;
 }
 
-/* line 168, ../sass/styles.scss */
+/* line 174, ../sass/styles.scss */
 .physics img {
   border-color: #a78e54;
 }
 
-/* line 172, ../sass/styles.scss */
+/* line 178, ../sass/styles.scss */
 .reveal-modal .image {
   text-align: center;
 }
