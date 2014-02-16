@@ -1,0 +1,20 @@
+{
+  "name": "tnbeatty",
+  "version": "0.0.1",
+  "description": "Nate Beatty's corner of the web.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/tnbeatty/tnbeatty.github.com",
+  "author": "Nate Beatty",
+  "license": "All Rights Reserved",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "assemble": "~0.4.34",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-compass": "~0.7.1",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}

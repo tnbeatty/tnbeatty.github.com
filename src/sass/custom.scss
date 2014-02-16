@@ -1,0 +1,16 @@
+@import "compass/css3";
+
+@import url("http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600");
+
+/* GLOBAL STYLES */
+
+.splash-container {
+
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 1em 2em;
+
+	.title {
+		text-align: center;
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"dev": {
+		"dir": "src"
+	},
+	"dist": {
+		"dir": "site"
+	},
+	"tmp": {
+		"dir": "tmp"
+	}
+}
