@@ -106,7 +106,7 @@ footer {
 		margin: 0 auto;
 		display: table;
 		height: 100%;
-		width: $small-size;
+		max-width: $small-size;
 		overflow: hidden;
 
 		.content {
@@ -115,6 +115,7 @@ footer {
 			vertical-align: middle;
 			color: $maincolor;
 			text-align: center;
+			font-weight: 100;
 
 			p {
 				font-size: 1.2rem;
