@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(window).load(function() {
 
-	// $('.splash-container .background').fadeOut(0);
+	$('.splash-container .background').fadeOut(0);
 
 	var url = 'img/landing_bg.jpg';
 	$.ajax({ 
