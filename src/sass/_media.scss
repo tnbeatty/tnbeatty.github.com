@@ -1,0 +1,7 @@
+@media only screen and (max-width: ($medium-size - 1)) { // small screens
+	.splash-container {
+		.splash-content {
+			padding-top: 1em;
+		}
+	}
+}

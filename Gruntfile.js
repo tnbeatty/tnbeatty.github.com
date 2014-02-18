@@ -16,6 +16,10 @@ module.exports = function(grunt) {
 			copy: {
 				files: ['<%= config.dev.dir %>/img/**/*.*'],
 				tasks: ['copy:img']
+			},
+			uglify: {
+				files: ['<%= config.dev.dir %>/js/**/*.*'],
+				tasks: ['uglify:js']
 			}
 		},
 		compass: {
@@ -25,15 +29,6 @@ module.exports = function(grunt) {
 					cssDir: '<%= config.tmp.dir %>/css',
 					environment: 'production'
 				}
-			}
-		},
-		concat: {
-			options: {
-				banner: '/*!\n* <%= pkg.name %> | Updated <%= grunt.template.today("dd-mm-yy") %> \n* Site by Lightwell | http://lightwell3d.com \n*/\n\n'
-			},
-			css: {
-				src: ['<%= config.tmp.dir %>/css/pure-min.css', '<%= config.tmp.dir %>/css/custom.css'], // THIS SHOULD BE REGEXED
-				dest: '<%= config.dist.dir %>/css/styles.css',
 			}
 		},
 		assemble: {
@@ -54,10 +49,21 @@ module.exports = function(grunt) {
 				'site/img/',
 				'site/js',
 				'!.gitignore',
-				'!.git'
+				'!.git',
+				'!README.*',
+				'!CNAME'
 			],
 			tmp: ['tmp/'],
 			css: ['tmp/css/','site/css/']
+		},
+		concat: {
+			options: {
+				banner: '/*!\n* <%= pkg.name %> | Updated <%= grunt.template.today("dd-mm-yy") %> \n* Site by Lightwell | http://lightwell3d.com \n*/\n\n'
+			},
+			css: {
+				src: ['<%= config.tmp.dir %>/css/pure-min.css', '<%= config.tmp.dir %>/css/custom.css'], // THIS SHOULD BE REGEXED
+				dest: '<%= config.dist.dir %>/css/styles.css',
+			}
 		},
 		copy: {
 			dist: {
@@ -82,6 +88,13 @@ module.exports = function(grunt) {
 				src: '<%= config.dev.dir %>/lib/pure-min.css',
 				dest: '<%= config.tmp.dir %>/css/pure-min.css'
 			}
+		},
+		uglify: {
+			js: {
+				files: {
+					'<%= config.dist.dir %>/js/ctrl.index.js': ['<%= config.dev.dir %>/js/ctrl.index.js']
+				}
+			}
 		}
 	});
 
@@ -91,6 +104,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('build', [
 		'clean:dist',
