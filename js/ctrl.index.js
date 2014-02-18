@@ -1,1 +1,21 @@
-$(document).ready(function(){var a="img/landing_bg.jpg";$.ajax({url:a,cache:!0,processData:!1}).always(function(){$(".splash-container .background-unloaded").css("background-image","url("+a+")"),$(".splash-container .background-unloaded").css({opacity:.3,"-ms-filter":"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)",filter:"alpha(opacity=50)","-moz-opacity":.5,"-khtml-opacity":.5})})});
+$(document).ready(function() {
+
+	// $('.splash-container .background').fadeOut(0);
+
+	var url = 'img/landing_bg.jpg';
+	$.ajax({ 
+		url : url, 
+		cache: true,
+		processData : false,
+	}).always(function(){
+		$('.splash-container .background-unloaded').css('background-image', 'url(' + url + ')');
+
+		$('.splash-container .background-unloaded').css({
+			'opacity' : 0.3,
+			'-ms-filter' : 'progid:DXImageTransform.Microsoft.Alpha(Opacity=30)',
+			'filter' : 'alpha(opacity=50)',
+			'-moz-opacity' : 0.5,
+			'-khtml-opacity' : 0.5
+		});
+	});
+});
