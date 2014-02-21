@@ -34,6 +34,7 @@ module.exports = function(grunt) {
 		assemble: {
 			options: {
 				layout: '<%= config.dev.dir %>/layouts/default.hbs',
+				partials: ['<%= config.dev.dir %>/partials/**/*.hbs'],
 				flatten: true
 			},
 			pages: {
