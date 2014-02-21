@@ -1,7 +1,20 @@
 $(window).load(function() {
 
-	$('.splash-container .background').fadeOut(0);
+	// -- ACTION LISTENERS -- //
+	// ---------------------- //
 
+	$('.navbutton').click(function(e) {
+		e.preventDefault();
+		var ele = $(this);
+		console.log(ele.attr('tnb-dest'));
+		$('html, body').animate({ scrollTop: $('.'+ele.attr('tnb-dest')).offset().top }, 500);
+	
+	});
+
+	// -- MAIN -- //
+	// ---------- //
+
+	$('.splash-container .background').fadeOut(0);
 	var url = 'img/landing_bg.jpg';
 	$.ajax({ 
 		url : url, 
@@ -18,4 +31,5 @@ $(window).load(function() {
 			'-khtml-opacity' : 0.5
 		});
 	});
+
 });
