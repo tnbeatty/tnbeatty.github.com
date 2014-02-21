@@ -8,12 +8,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-	<title>Nate Beatty's Homepage</title>
+	<title>Nate Beatty | {{ title }}</title>
 	
 	<link href='css/styles.css' rel='stylesheet' type='text/css'>
 
 	<!-- Load jQuery CDN with local fallback -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
 	<script>
 		if (!window.jQuery) {
 			document.write('<script src="js/jquery-1.10.2.min.js"><\/script>');
@@ -23,7 +24,22 @@
 </head>
 <body>
 
+	<a id="top" class="top"></a>
+
 	{{> body }}
+
+	<footer class="footer">
+		<div class="content-wrapper">
+			<div class="content">
+				<p>I currently build virtual reality tools with <a href="http://irisvr.com">Iris</a> and am always available for freelance development through <a href="http://lightwell3d.com">Lightwell</a>, a 3D visualization, web design, and branding studio based in Vermont.</p>
+				<p>Site created by Nate Beatty &lt;nate.beatty@gmail.com&gt;</p>
+			</div>
+		</div>
+
+		<nav class="sectionnav">
+			<a href="#" class="navbutton" tnb-dest="top"><i class="fa fa-angle-up fa-4x" title="More Information"></i><br>Back to the Top</a><br>
+		</nav>
+	</footer>
 
 </body>
 </html>

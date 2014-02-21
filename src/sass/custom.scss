@@ -23,16 +23,15 @@ html, button, input, select, textarea,
 	font-family: Helvetica, sans-serif;
 }
 
-// Custom Styles
+// Global Styles
 // ==============================================
-
-/* GLOBAL STYLES */
 
 body, html {
 	height: 100%;
+	section, footer { padding-bottom: 64px; }
 }
 
-nav.downarrow {
+nav.sectionnav {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -41,9 +40,62 @@ nav.downarrow {
 
 	a {
 		color: inherit;
+		text-decoration: none;
 		@include opacity(0.5);
 	}
 }
+
+a.top, a.navmarker {
+	display: hidden;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	line-height: 0;
+}
+
+footer {
+	position: relative;
+	height: 300px;
+	width: 100%;
+	background: $primary-color-purple;
+	color: $default-text-color;
+	overflow: hidden;
+
+	.content-wrapper {
+		position: relative;
+		margin: 0 auto;
+		display: table;
+		height: 100%;
+		max-width: $small-size;
+		overflow: hidden;
+
+		.content {
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			font-weight: 100;
+
+			p {
+				font-size: 1.2rem;
+				a {
+					color: $default-text-color;
+					border-bottom: $primary-color-red dashed 1px;
+					text-decoration: none;
+
+					&:hover {
+						border-bottom: $primary-color-red solid 1px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Index Styles
+// ==============================================
 
 .splash-container {
 	position: relative;
@@ -116,6 +168,47 @@ nav.downarrow {
 					}
 				}
 			}
+		}
+	}
+}
+
+.contact-container {
+	position: relative;
+	background: $primary-color-cream;
+	min-height: 200px;
+	width: 100%;
+	padding: 40px 0;
+	color: $primary-color-red;
+
+	>header {
+		text-align: center;
+		color: $primary-color-green;
+
+		h1 { 
+			font-size: 2.5rem;
+			font-weight: 200;
+			padding: 10px 0;
+		}
+		h2 { 
+			// font-size: 1.4rem;
+			font-weight: 200; 
+		}
+	}
+
+	.reach-out {
+		width: 100%;
+		max-width: 768px;
+		margin: 0 auto;
+		padding-bottom: 50px;
+		text-align: center;
+
+		h2 { 
+			// font-size: 1.4rem;
+			font-weight: 300; 
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
 		}
 	}
 }
@@ -244,44 +337,11 @@ nav.downarrow {
 	padding: 40px 0;
 }
 
-footer {
-	position: relative;
-	height: 300px;
+// Project Styles
+// ==============================================
+
+.project-container {
 	width: 100%;
-	background: $primary-color-purple;
-	overflow: hidden;
-
-	.content-wrapper {
-		position: relative;
-		margin: 0 auto;
-		display: table;
-		height: 100%;
-		max-width: $small-size;
-		overflow: hidden;
-
-		.content {
-			height: 100%;
-			display: table-cell;
-			vertical-align: middle;
-			color: $default-text-color;
-			text-align: center;
-			font-weight: 100;
-
-			p {
-				font-size: 1.2rem;
-				a {
-					color: $default-text-color;
-					border-bottom: $primary-color-red dashed 1px;
-					text-decoration: none;
-
-					&:hover {
-						border-bottom: $primary-color-red solid 1px;
-					}
-				}
-			}
-		}
-
-	}
 }
 
 @import "media";

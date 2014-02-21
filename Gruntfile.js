@@ -41,6 +41,10 @@ module.exports = function(grunt) {
 				files: {
 					'<%= config.dist.dir %>/': ['<%= config.dev.dir %>/pages/*.hbs']
 				}
+			},
+			projects: {
+				options: {layout: '<%= config.dev.dir %>/layouts/project-layout.hbs'},
+				files: {'<%= config.dist.dir %>/': ['<%= config.dev.dir %>/pages/projects/*.hbs']}
 			}
 		},
 		clean: {

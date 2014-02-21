@@ -1,15 +1,30 @@
 $(window).load(function() {
 
+	// -- HELPER METHODS -- //
+	// -------------------- //
+
 	// -- ACTION LISTENERS -- //
 	// ---------------------- //
 
 	$('.navbutton').click(function(e) {
 		e.preventDefault();
 		var ele = $(this);
-		console.log(ele.attr('tnb-dest'));
 		$('html, body').animate({ scrollTop: $('.'+ele.attr('tnb-dest')).offset().top }, 500);
-	
 	});
+
+	// Fade portfolio items in on window scroll
+	// $('.portfolio-container article').css('opacity', 0.0);
+	// $(window).scroll(function() {
+	// 	// check the element position
+	// 	$('.portfolio-container article').each(function() {
+	// 		var itemBottom = $(this).position().top + $(this).outerHeight();
+	// 		var windowBottom = $(window).scrollTop() + $(window).height();
+
+	// 		if (windowBottom > itemBottom) {
+	// 			$(this).animate({'opacity':'1'}, 500);
+	// 		}
+	// 	});
+	// });
 
 	// -- MAIN -- //
 	// ---------- //
