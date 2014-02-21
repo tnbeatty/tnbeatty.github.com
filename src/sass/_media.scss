@@ -8,5 +8,8 @@
 		article {
 			p { padding: 15px 0; }
 		}
+		figure {
+			.caption { display: none; }
+		}
 	}
 }
