@@ -11,7 +11,7 @@ $(window).load(function() {
 		$('.splash-container .background-unloaded').css('background-image', 'url(' + url + ')');
 
 		$('.splash-container .background-unloaded').css({
-			'opacity' : 0.3,
+			'opacity' : 0.5,
 			'-ms-filter' : 'progid:DXImageTransform.Microsoft.Alpha(Opacity=30)',
 			'filter' : 'alpha(opacity=50)',
 			'-moz-opacity' : 0.5,

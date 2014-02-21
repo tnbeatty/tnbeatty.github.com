@@ -1,4 +1,5 @@
 @import "compass/css3";
+// @import "compass/reset";
 
 @import "settings";
 
@@ -11,9 +12,13 @@ html, button, input, select, textarea,
 	font-family: Helvetica, sans-serif;
 }
 
+/* RESETS */
+
 /* GLOBAL STYLES */
 
-$maincolor: #eee;
+$primary-color-purple: #2a333b;
+$primary-color-red: #e14236;
+$primary-color-green: #86941c;
 
 body, html {
 	height: 100%;
@@ -23,9 +28,9 @@ body, html {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #43576E;
+	background: $primary-color-purple;
 
-	color: #eee;
+	color: $default-text-color;
 
 	@include box-sizing(border-box);
 
@@ -33,10 +38,10 @@ body, html {
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		background: no-repeat center center; 
+		background: no-repeat center center fixed; 
 		@include background-size(cover);
 		@include opacity(0.0);
-		@include filter(blur(3px));
+		// @include filter(blur(3px));
 		@include transition(opacity 3s ease);
 	}
 
@@ -58,7 +63,7 @@ body, html {
 			}
 			h2 { 
 				font-size: 1.4rem;
-				font-weight: 200; 
+				font-weight: 200;
 			}
 
 			ul.social-media {
@@ -71,12 +76,12 @@ body, html {
 				li {
 					margin: 0 5px;
 					display: inline-block;
-					background-color: rgba(255,255,255,0.6);
+					background-color: rgba(255,255,255,0.75);
 					@include transition(background-color 0.5s ease);
 					border-radius: 50%;
 
 					&:hover {
-						background-color: rgba(255,255,255,0.8);
+						background-color: rgba(255,255,255,0.9);
 					}
 
 					a {
@@ -94,44 +99,121 @@ body, html {
 	}
 }
 
-footer {
+.portfolio-container {
 	position: relative;
-	height: 300px;
+	background: #fff;
+	min-height: 200px;
 	width: 100%;
-	background: #2c2c2c;
-	overflow: hidden;
+	padding: 40px 0;
 
-	.content-wrapper {
-		position: relative;
+	>header {
+		text-align: center;
+		color: $primary-color-red;
+
+		h1 { 
+			font-size: 2.5rem;
+			font-weight: 200;
+			padding: 10px 0;
+		}
+		h2 { 
+			font-size: 1.4rem;
+			font-weight: 200; 
+		}
+	}
+
+	article {
+		max-width: $large-size;
 		margin: 0 auto;
-		display: table;
-		height: 100%;
-		max-width: $small-size;
-		overflow: hidden;
+		padding: 20px 0;
 
-		.content {
-			height: 100%;
-			display: table-cell;
-			vertical-align: middle;
-			color: $maincolor;
+		h2 {
+			padding: 15px 0;
+			margin: 0;
+			font-size: 1.6rem;
+			font-weight: 200;
 			text-align: center;
-			font-weight: 100;
+		}
+		a {
+			text-decoration: inherit;
+			color: inherit;
+		}
+		p {
+			padding: 5px 0;
+			margin: 0;
+			font-size: 0.9rem;
+			a {
+				border-bottom: $primary-color-green dashed 1px;
+				&:hover {
+					border-bottom: $primary-color-green solid 1px;
+				}
+			}
+		}
 
-			p {
-				font-size: 1.2rem;
-				a {
-					color: $maincolor;
-					border-bottom: #cc0000 dashed 1px;
-					text-decoration: none;
+			header {
+				padding: 0 20px;
+				background: #eee;
+				@include box-sizing(border-box);
+			}
 
-					&:hover {
-						border-bottom-color: #ee0000;
-					}
+			.imgwrapper {
+				position: relative;
+				width: 100%;
+				height: 0;
+				padding-bottom: 40%;
+				overflow: hidden;
+				background: #fff;
+
+				img {
+					position: relative;
+					top: 0;
+					left: 0;
+					width: 100%;
+					margin: 0;
+					padding: 0;
 				}
 			}
 		}
 
 	}
-}
 
-@import "media";
+	footer {
+		position: relative;
+		height: 300px;
+		width: 100%;
+		background: $primary-color-purple;
+		overflow: hidden;
+
+		.content-wrapper {
+			position: relative;
+			margin: 0 auto;
+			display: table;
+			height: 100%;
+			max-width: $small-size;
+			overflow: hidden;
+
+			.content {
+				height: 100%;
+				display: table-cell;
+				vertical-align: middle;
+				color: $default-text-color;
+				text-align: center;
+				font-weight: 100;
+
+				p {
+					font-size: 1.2rem;
+					a {
+						color: $default-text-color;
+						border-bottom: $primary-color-red dashed 1px;
+						text-decoration: none;
+
+						&:hover {
+							border-bottom-color: $primary-color-green;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	@import "media";
