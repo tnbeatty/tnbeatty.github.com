@@ -4,6 +4,15 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		config: grunt.file.readJSON('config.json'),
+		connect: {
+			server: {
+				options: {
+					port: 9001,
+					base: 'site/',
+					// keepalive: true
+				}
+			}
+		},
 		watch: {
 			compass: {
 				files: ['<%= config.dev.dir %>/sass/**/*.scss'],
@@ -43,8 +52,12 @@ module.exports = function(grunt) {
 				}
 			},
 			projects: {
-				options: {layout: '<%= config.dev.dir %>/layouts/project-layout.hbs'},
-				files: {'<%= config.dist.dir %>/': ['<%= config.dev.dir %>/pages/projects/*.hbs']}
+				options: {
+					layout: '<%= config.dev.dir %>/layouts/project-layout.hbs'
+				},
+				files: {
+					'<%= config.dist.dir %>/': ['<%= config.dev.dir %>/pages/projects/*.hbs']
+				}
 			}
 		},
 		clean: {
@@ -59,7 +72,7 @@ module.exports = function(grunt) {
 				'!CNAME'
 			],
 			tmp: ['tmp/'],
-			css: ['tmp/css/','site/css/']
+			css: ['tmp/css/', 'site/css/']
 		},
 		concat: {
 			options: {
@@ -110,6 +123,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('assemble');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	grunt.registerTask('build', [
 		'clean:dist',
@@ -117,6 +131,10 @@ module.exports = function(grunt) {
 		'style',
 		'copy:dist'
 	]);
+
+	grunt.registerTask('serve', [
+		'connect',
+		'watch']);
 
 	grunt.registerTask('style', [
 		'clean:css',
